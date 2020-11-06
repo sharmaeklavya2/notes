@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+html {font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;}
+body {margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;}
+a:not(:hover) {text-decoration: none;}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+
+/* color scheme */
+body {color: #202020;}
+a {color: rgb(3, 102, 214);}
+a:visited {color: rgb(100, 0, 150);}
+@media (prefers-color-scheme: dark) {
+    body {background: rgb(27, 30, 32); color: rgb(192, 192, 192);}
+    a {color: rgb(65, 175, 235);}
+    a:visited {color: rgb(150, 100, 230);}
+    img {filter: brightness(.8) contrast(1.2);}
+}
+</style>
+</head>
+<body>
+<h1>Renewal Theory</h1>
+<p>Summary of Chapter 7 from
+Introduction to Probability Models (11th ed)
+by Sheldon M. Ross.</p>
+<h2>1 - Introduction</h2>
+<ul>
+<li>Definition of inter-arrival/holding times, jump times, renewal process.</li>
+<li>Proof that N(t) is finite for all t.</li>
+<li>Proof that N(∞) = lim_{t → ∞} N(t) = ∞.</li>
+</ul>
+<h2>2 - Distribution of N(t)</h2>
+<ul>
+<li>P(N(t) = n) in terms of cumulative distribution functions of jump times.</li>
+<li>P(N(t) = n) as an integral.</li>
+<li>m(t) = E(N(t)) in terms of cumulative distribution functions of jump times.</li>
+<li>Claim (without proof) that m(t) uniquely determines F.</li>
+<li>Claim (without proof) that m(t) is finite.</li>
+<li>Renewal equation</li>
+</ul>
+<h2>3 - Limit Theorems and their Applications</h2>
+<ul>
+<li>N(t)/t converges to 1/μ when t → ∞.</li>
+<li>Example 7.7: analyzing dice games using renewal theory</li>
+<li>Elementary renewal theorem (without proof).</li>
+<li>Stopping time for a sequence of random variables.</li>
+<li>Wald's equation for stopping time.</li>
+<li>Proof of the elementary renewal theorem.</li>
+<li>Central limit theorem for renewal processes.</li>
+</ul>
+<h2>4 - Renewal Reward Processes</h2>
+<ul>
+<li>Notation for rewards.</li>
+<li>R(t)/t converges to E(R)/E(X) when t → ∞.</li>
+<li>Elementary reward renewal theorem (without proof).</li>
+<li>Example 7.18: average age of renewal process.</li>
+<li>Example 7.20: average no. of people waiting at bus stop.</li>
+</ul>
+<h2>5 - Regenerative Process</h2>
+<p>TODO</p>
+<h2>6 - Semi-Markov Process</h2>
+<ul>
+<li>Definition of semi-markov process.</li>
+<li>Long-run proportion of semi-markov process.</li>
+</ul>
+<h2>7 - Inspection Paradox</h2>
+<p>TODO</p>
+<h2>8 - Computing the Renewal Function</h2>
+<p>TODO</p>
+<h2>9 - Application to Patters</h2>
+<p>TODO</p>
+<h2>10 - The Insurance Ruin Problem</h2>
+<p>TODO</p>
+</body>
+</html>

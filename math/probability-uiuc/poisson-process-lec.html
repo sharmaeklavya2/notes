@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+html {font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;}
+body {margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;}
+a:not(:hover) {text-decoration: none;}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+
+/* color scheme */
+body {color: #202020;}
+a {color: rgb(3, 102, 214);}
+a:visited {color: rgb(100, 0, 150);}
+@media (prefers-color-scheme: dark) {
+    body {background: rgb(27, 30, 32); color: rgb(192, 192, 192);}
+    a {color: rgb(65, 175, 235);}
+    a:visited {color: rgb(150, 100, 230);}
+    img {filter: brightness(.8) contrast(1.2);}
+}
+</style>
+</head>
+<body>
+<h1>Exponential Distribution and Poisson Processes</h1>
+<p>Summary of notes from lectures by Sheldon Jacobson
+for the course IE 410 at UIUC in Fall 2021.</p>
+<h2>The exponential distribution</h2>
+<ul>
+<li>PDF, CDF, E(X), Var(X).</li>
+<li>Memorylessness.</li>
+<li>Definition: hazard rate.</li>
+<li>CDF from hazard rate.</li>
+<li>Sum of n exponential random variables.</li>
+<li>PDF of a gamma variable.</li>
+<li>Theorem: <code>P(X_1 &lt; X_2) = λ_1/(λ_1 + λ_2)</code>,
+    where <code>X_i ~ Exponential(λ_i)</code> and <code>X_1</code> and <code>X_2</code> are independent.</li>
+<li>Example: Taxi arrival.</li>
+<li>Theorem: Probability distributions of <code>min_i X_i</code> and <code>max_i X_i</code>, where <code>X_i ~ Exponential(λ_i)</code>.</li>
+<li>Theorem: <code>P(X_1 = min(X_1, X_2, ..., X_n)) = λ_1/(λ_1 + λ_2 + ... + λ_n)</code>,
+    where <code>X_i ~ Exponential(λ_i)</code> and all <code>X_i</code> are independent.</li>
+</ul>
+<h2>Poisson Process</h2>
+<ul>
+<li>Definition: counting process.</li>
+<li>Definition: Independent increments, stationary increments.</li>
+<li>Definitions of Poisson process and their equivalence.</li>
+<li>Theorem: P(N(s)=k | N(t)=n) = C(n,k) (s/t)^k (1-s/t)^(n-k).</li>
+<li>Definition: Inter-arrival times and arrival times of a counting process.</li>
+<li>Theorem: Inter-arrival times of a poisson process are IID exponential(λ).</li>
+<li>Theorem: Sum of n exp(λ) variables is Gamma(n, λ).</li>
+</ul>
+<h2>Decomposition of Poisson process</h2>
+<ul>
+<li>Theorem: Suppose each event receives a label i with probability <code>p_i</code>, and there are k distinct labels.
+    Let <code>N_i(t)</code> be the number of events labeled i in time t.
+    Then <code>N_i</code> is a poisson process with parameter <code>λp_i</code>.
+    Also, for every t, all <code>N_i(t)</code> are independent.
+    Also, conditional on N(t)=n, we get that <code>N_i(t) ~ Binomial(n, p_i)</code>.</li>
+<li>Theorem: Let <code>{N_i: i ∈ [k]}</code> be independent poisson processes, where <code>N_i</code> has parameter <code>λ_i</code>.
+    Let <code>N(t) = N_1(t) + ... + N_k(t)</code>. Then N is a poisson process with parameter <code>λ_1 + ... + λ_k</code>.</li>
+</ul>
+<h2>Coupon collector problem</h2>
+<h2>Competing poisson processes</h2>
+<ul>
+<li>If there are two poisson processes, what is the probability of seeing
+    m events of the first before n events of the second?</li>
+</ul>
+<h2>Conditional on n events, arrival times are distributed as order statistics of uniform distribution</h2>
+<h2>Inhomogeneous poisson process</h2>
+<ul>
+<li>Definition</li>
+<li>Theorem: An inhomogeneous Poisson process can be reformulated as a random sample
+    from a (homogeneous) Poisson proces.</li>
+</ul>
+<h2>Compound poisson process</h2>
+</body>
+</html>
