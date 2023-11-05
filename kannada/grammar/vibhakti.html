@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+
+/* extra */
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+</style>
+</head>
+<body>
+<h1>कारक (ವಿಭಕ್ತಿಗಳು)</h1>
+<p>[source and explanation: <a href="https://www.youtube.com/watch?v=F3xmcQzAiGY">https://www.youtube.com/watch?v=F3xmcQzAiGY</a>
+and <a href="https://www.youtube.com/watch?v=Eo5b2F_tM5g">https://www.youtube.com/watch?v=Eo5b2F_tM5g</a>]</p>
+<p>In Kannada, कारक is applied by adding a suffix to the noun/pronoun.</p>
+<p>
+<table>
+<thead>
+<tr><th>Sno</th><th>कारक</th><th>suffix</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>कर्ता</td><td>ಉ (optional)</td></tr>
+<tr><td>2</td><td>कर्म</td><td>ಅನ್ನು</td></tr>
+<tr><td>3</td><td>करण</td><td>ಇಂದ</td></tr>
+<tr><td>4</td><td>संप्रदान</td><td>ಇಗೆ/ಕ್ಕೆ</td></tr>
+<tr><td>5</td><td>अपादान</td><td>ಇಂದ</td></tr>
+<tr><td>6</td><td>संबंध</td><td>ಅ/ಇನ</td></tr>
+<tr><td>7</td><td>अधिकरण</td><td>ಆಲ್ಲಿ</td></tr>
+<tr><td>8</td><td>संबोधन</td><td>ಏ</td></tr>
+</tbody>
+</table>
+</p>
+
+<p>To join the noun with the suffix, we need to use संधि.
+We have 5 cases for संधि (and some additional exceptional cases).</p>
+<ol>
+<li>ಅ-ending masculine nouns</li>
+<li>ಅ-ending feminine nouns</li>
+<li>ಅ-ending neuter nouns</li>
+<li>ಎ/ಇ-ending nouns</li>
+<li>ಉ-ending nouns</li>
+<li>ಉ/ಊ-ending nouns with at most 2 syllables, and if there are 2 syllables, then they both start with consonants and have short vowels (e.g., ಹಸು)</li>
+</ol>
+<p>
+<table>
+<thead>
+<tr>
+<th>Sno</th>
+<th>कारक</th>
+<th>ಅ (m)</th>
+<th>ಅ (f)</th>
+<th>ಅ (n)</th>
+<th>ಎ/ಇ</th>
+<th>ಉ</th>
+<th>ಉ (ex)</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>1</td>
+<td>कर्ता</td>
+<td>+ನು</td>
+<td>+ಳು</td>
+<td>+ವು</td>
+<td>+ಯು</td>
+<td>(none)</td>
+<td>(none)</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>कर्म</td>
+<td>+ನನ್ನು</td>
+<td>+ಳನ್ನು</td>
+<td>+ವನ್ನು</td>
+<td>+ಯನ್ನು</td>
+<td>-ಉ+ಅನ್ನು</td>
+<td>+ವನ್ನು</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>करण</td>
+<td>+ನಿಂದ</td>
+<td>+ಳಿಂದ</td>
+<td>+ದಿಂದ</td>
+<td>+ಯಿಂದ</td>
+<td>-ಉ+ಇಂದ</td>
+<td>+ವಿಂದ</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>संप्रदान</td>
+<td>+ನಿಗೆ</td>
+<td>+ಳಿಗೆ</td>
+<td>+ಕ್ಕೆ</td>
+<td>+ಗೆ</td>
+<td>-ಉ+ಇಗೆ</td>
+<td>+ವಿಗೆ</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>अपादान</td>
+<td>+ನಿಂದ</td>
+<td>+ಳಿಂದ</td>
+<td>+ದಿಂದ</td>
+<td>+ಯಿಂದ</td>
+<td>-ಉ+ಇಂದ</td>
+<td>+ವಿಂದ</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>संबंध</td>
+<td>+ನ</td>
+<td>+ಳ</td>
+<td>+ದ</td>
+<td>+ಯ</td>
+<td>-ಉ+ಇನ</td>
+<td>+ವಿನ</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>अधिकरण</td>
+<td>+ನಲ್ಲಿ</td>
+<td>+ಳಲ್ಲಿ</td>
+<td>+ದಲ್ಲಿ</td>
+<td>+ಯಲ್ಲಿ</td>
+<td>-ಉ+ಇನಲ್ಲಿ</td>
+<td>+ವಿನಲ್ಲಿ</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>संबोधन</td>
+<td>+ನೇ</td>
+<td>+ಳೀ</td>
+<td>+ವೇ</td>
+<td>+ಯೇ</td>
+<td>-ಉ+ಏ</td>
+<td>+ವೇ</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
