@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Verbs and Tenses</h1>
+<p>[sources: <a href="https://www.youtube.com/watch?v=FDtDetY5C8I">https://www.youtube.com/watch?v=FDtDetY5C8I</a>, <a href="https://www.youtube.com/watch?v=j1SWRN2MF2A">https://www.youtube.com/watch?v=j1SWRN2MF2A</a>, <a href="https://kannadakalike.org/grammar/imperative-mood">https://kannadakalike.org/grammar/imperative-mood</a>]</p>
+<p>There are 9 tenses in Kannada: {past,present,future} × {simple,continuous,perfect}.
+English also has 'perfect continuous' tenses. Those are mapped to 'continuous' tenses in Kannada. In Kannada, the simple present tense is also called the <em>present habitual tense</em> when the verb is not ಇರು (होना, to be).</p>
+<p>Other than these tenses, we also have the imperative mood.</p>
+<h2>Imperative mood (ಆಜ್ಞಾರ್ಥಕ ರೂಪಗಳು) and verb root</h2>
+<p>When we want to give a command, suggestion, or request to someone, we use the imperative mood. If a sentence contains just a verb and nothing else, it's the imperative mood. There are two varieties: informal singular and plural/formal.</p>
+<p>Examples of informal singular:</p>
+<ol>
+<li>look - देखो - ನೋಡು</li>
+<li>go - जाओ - ಹೋಗು</li>
+<li>write - लिखो - ಬರೆ</li>
+</ol>
+<p>Examples of plural/formal:</p>
+<ol>
+<li>look - देखिए - ನೋಡಿ</li>
+<li>go - जाइए - ಹೋಗಿ</li>
+<li>write - लिखिए - ಬರೆಯಿರಿ</li>
+</ol>
+<h3>Converting informal singular to plural/formal</h3>
+<ol>
+<li>ends with ಉ: remove ಉ and append ಇ.<ol>
+<li>look: ನೋಡು (देखो) → ನೋಡಿ (देखिए).</li>
+</ol>
+</li>
+<li>ends with ಎ or ಇ: append ಯಿರಿ.<ol>
+<li>write: ಬರೆ (लिखो) → ಬರೆಯಿರಿ (लिखिए).</li>
+<li>drink: ಕುಡಿ (पिओ) → ಕುಡಿಯಿರಿ (पीजिए).</li>
+</ol>
+</li>
+<li>misc:<ol>
+<li>bring: ತಾ (लाओ) → ತನ್ನಿ (लाइए).</li>
+<li>come: ಬಾ (आओ) → ಬನ್ನಿ (आइए).</li>
+</ol>
+</li>
+</ol>
+<h3>Verb root</h3>
+<p>The <em>root</em> of a verb is its singular informal imperative form.
+Exceptions:</p>
+<ol>
+<li>bring/लाओ: ತಾ → ತರು.</li>
+<li>come/आओ: ಬಾ → ಬರು.</li>
+</ol>
+<h2>Simple Tense</h2>
+<p>In the simple tense, the verb is conjugated as 'augmented verb root + participle + PNG suffix' (+ denotes concatenation (without संधि)). The augmentation depends on the tense. The participle and PNG suffix depends on the tense and the subject's PNG (Person type (1st, 2nd, 3rd), Number, Gender).</p>
+<p>Examples:</p>
+<ol>
+<li>Present: I see. - मैं देखता हूँ। - ನಾನು ನೋಡುತ್ತೇನೆ (ನೋಡು + ತ್ತೇನೆ).</li>
+<li>Past: I saw. - मैंने देखा। - ನಾನು ನೋಡಿದೆನು (ನೋಡಿ + ದೆನು).</li>
+<li>Future: I will see. - मैं देखूँगा। - ನಾನು ನೋಡುವೆನು (ನೋಡು + ವೆನು).</li>
+</ol>
+<h3>Augmenting the verb root</h3>
+<ol>
+<li>ಉ-ending: No change for present and future. For past, remove ಉ and append ಇ.</li>
+<li>ಎ or ಇ: Append ಯು for present and future. No change for past.</li>
+</ol>
+<h3>Participle and Suffix</h3>
+<p>This tables lists 'participle + suffix' for each case.
+Exceptional cases are highlighted.</p>
+<table>
+<thead>
+<tr><th>Subject</th><th>Present</th><th>Past</th><th>Future</th></tr>
+</thead>
+<tbody>
+<tr><td>ನಾನು</td><td>ತ್ತೇನೆ (ತ್ತ್ + ಏನೆ)</td><td>ದೆನು (ದ್ + ಎನು)</td><td>ವೆನು (ವ್ + ಎನು)</td></tr>
+<tr><td>ನಾವು</td><td>ತ್ತೇವೆ (ತ್ತ್ + ಏವೆ)</td><td>ದೆವು (ದ್ + ಎವು)</td><td>ವೆವು (ವ್ + ಎವು)</td></tr>
+<tr><td>ನೀನು</td><td>ತ್ತೀಯ (ತ್ತ್ + ಈಯ)</td><td>ದೆ (ದ್ + ಎ)</td><td>ವಿಯೆ/ವೆ (ವ್ + ಎ/ಎವು)</td></tr>
+<tr><td>ನೀವು</td><td>ತ್ತೀರಿ (ತ್ತ್ + ಈರಿ)</td><td>ದಿರಿ (ದ್ + ಇರಿ)</td><td>ವಿರಿ (ವ್ + ಇರಿ)</td></tr>
+<tr><td>ಅವನು</td><td>ತ್ತಾನೆ (ತ್ತ್ + ಆನೆ)</td><td>ದನು (ದ್ + ಅನು)</td><td>ವನು (ವ್ + ಅನು)</td></tr>
+<tr><td>ಅವಳು</td><td>ತ್ತಾಳೆ (ತ್ತ್ + ಆಳೆ)</td><td>ದಳು (ದ್ + ಅಳು)</td><td>ವಳು (ವ್ + ಅಳು)</td></tr>
+<tr><td>ಅವರು</td><td>ತ್ತಾರೆ (ತ್ತ್ + ಆರೆ)</td><td>ದರು (ದ್ + ಅರು)</td><td>ವರು (ವ್ + ಅರು)</td></tr>
+<tr><td>ಅದು</td><td>ತ್ತದೆ (ತ್ತ್ + ಅದೆ)</td><td class="warning">ತು/ಯಿತು*</td><td class="warning">ವುದು</td></tr>
+<tr><td>ಅವು</td><td>ತ್ತವೆ (ತ್ತ್ + ಅವೆ)</td><td>ದವು (ದ್ + ಅವು)</td><td>ವವು (ವ್ + ಅವು)</td></tr>
+</tbody>
+</table>
+
+<p>* ತು for ಉ-ending and ಯಿತು for ಎ/ಒ-ending.</p>
+<h3>Past Augmentation Exceptions</h3>
+<p>For simple past, some verb roots have a different augmentation.</p>
+<ol>
+<li>हो / be: ಇರು → ಇದ್.</li>
+<li>जाओ / go: ಹೋಗು → ಹೋ</li>
+<li>आओ / come: ಬರು → ಬಂ</li>
+<li>लाओ / bring: ತರು → ತಂ</li>
+<li>खाओ / eat: ತಿನ್ನು → ತಿಂ</li>
+</ol>
+<h3>Other Exceptions</h3>
+<ol>
+<li>ಇರು (हो/be):<ol>
+<li>Present: augmented verb root + participle is ಇದ್ದ್  .</li>
+<li>Present: It is - वह है - ಅದು ಇದೆ.</li>
+<li>Present: They are - वे हैं - ಅವು ಇವೆ.</li>
+<li>Past: It was - वह था - ಅದು ಇತ್ತು.</li>
+<li>Future: The augmented verb root is ಇರು (as usual), but the participle + PNG suffix is (except in extremely formal Kannada) of the present form. E.g., I will be - ನಾನು ಇರುತ್ತೇನೆ.</li>
+</ol>
+</li>
+<li>It ate - उसने खाया - ಅದು ತಿಂದಿತು.</li>
+<li>Past tense of दो / give / ಕೊಡು: Augmented verb root + participle is ಕೊಟ್ಟ್.</li>
+</ol>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
