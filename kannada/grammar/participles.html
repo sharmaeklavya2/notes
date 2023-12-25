@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Participles</h1>
+<p>[source: <a href="https://www.youtube.com/watch?v=_lFzJ09FyHs">https://www.youtube.com/watch?v=_lFzJ09FyHs</a>]</p>
+<h2>Subordinate and Independent Clauses</h2>
+<p>Consider this sentence:</p>
+<blockquote>
+<p>If I find my pen, I will write your name. - अगर मुझे अपना pen मिला, तो मैं तुम्हारा नाम लिखूँगा।</p>
+</blockquote>
+<p>Here, the phrase "If I find my pen" is the <em>subordinate clause</em>,
+and "I will write your name" is the <em>independent clause</em>.
+The independent clause is valid by itself,
+but the subordinate clause is not; it needs to be followed by an independent clause.</p>
+<p>More examples (subordinate clause is emphasized):</p>
+<ol>
+<li><em>The girl who smiled at you</em> is walking towards you. -
+    <em>जो लड़की तुम्हें देख कर मुस्कुरा रही थी</em>, वह तुम्हारी ओर आ रही है।</li>
+<li><em>After entering the house</em>, I switched on the TV. -
+    <em>घर में घुसके</em> मैंने TV चलाया।</li>
+</ol>
+<h2>Participles</h2>
+<p>Participles are suffixes added to verbs.
+Kannada implements subordinate and independent clauses using participles.</p>
+<p>These are the types (and subtypes) of participles we will see:</p>
+<ol>
+<li>Relative participles: present/future, past.</li>
+<li>Verbal participles: present, past.</li>
+</ol>
+<h2>Relative Participles</h2>
+<p>Used to <em>adjectivfy</em> a verb. They are used before nouns.</p>
+<p>This is the rule for converting verb root to relative participle
+(there are exceptions for past relative participle):</p>
+<table>
+<thead>
+<tr><th></th><th>Present/Future</th><th>Past</th></tr>
+</thead>
+<tbody>
+<tr><td>ಉ-ending</td><td>+ವ</td><td>-ಉ+ಇದ</td></tr>
+<tr><td>non-ಉ-ending</td><td>+ಯುವ</td><td>+ದ</td></tr>
+</tbody>
+</table>
+
+<p>Examples of present relative participle:</p>
+<ol>
+<li>The horse which is running - जो घोड़ा भाग रहा है - <em>ಓಡುವ</em> ಕುದುರೆ</li>
+<li>The work which is being done - जो काम हो रहा है - <em>ಮಾಡುವ</em> ಕೆಲಸ</li>
+<li>The city that we are going to tomorrow, how far is it? -
+    कल जिस शहर जा रहे हैं वो कितना दूर है? -
+    ನಾಳೆ <em>ಹೋಗುವ</em> ನಗರ ಎಷ್ಟು ದೂರ?</li>
+<li>What you're telling me is hot news. -
+    जो तुम मुझे बता रहे हो वो बहुत गरम खबर है। -
+    ನೀನು <em>ಹೇಳುವ</em> ವಿಷಯ ಬಿಸಿ ಸಂದೇಶ.</li>
+<li>Take the bus that's coming now. -
+    अभी जो bus आ रही है वो ले लो। -
+    ಈಗ <em>ಬರುವ</em> busಅನ್ನು ತೆಗೊಳ್ಳು. </li>
+</ol>
+<p>Examples of future relative participle:</p>
+<ol>
+<li>The horse which will run - जो घोड़ा भागेगा - <em>ಓಡುವ</em> ಕುದುರೆ</li>
+<li>The work which will be done - जो काम होगा - <em>ಮಾಡುವ</em> ಕೆಲಸ</li>
+</ol>
+<p>Examples of past relative participle:</p>
+<ol>
+<li>The horse which ran - जो घोड़ा भागा था - <em>ಓಡಿದ</em> ಕುದುರೆ</li>
+<li>The work which was done - जो काम हुआ था - <em>ಮಾಡಿದ</em> ಕೆಲಸ</li>
+<li>The name of the city that I went to is Paris. -
+    मैं जिस शहर गया था उसका नाम Paris है। -
+    ನಾನು <em>ಹೋದ</em> ಊರಿನ ಹೆಸರು Paris.</li>
+<li>The clothes that I washed are missing. -
+    मैंने जो कपड़े धोए वो दिख नहीं रहे। -
+    ನಾನು <em>ಒಗೆದ</em> ಬಟ್ಟೆಗಳು ಕಾಣಲ್ಲ.</li>
+<li>The bus which went just now is mine. - जो बस अभी गई वह मेरी है। - ಈಗ <em>ಹೋದ</em> bus ನನ್ನದು.</li>
+<li>Did you see the movie that I saw? - जो movie मैंने देखी वो तुमने देखी क्या? -
+    ನಾನು <em>ನೋಡಿದ</em> movie ನೀನು ನೋಡಿದಿಯಾ?</li>
+</ol>
+<p>Exceptions for past relative participle:</p>
+<table>
+<tr><td>be</td><td>हो</td><td>ಇರು → ಇದ್ದ</td></tr>
+<tr><td>come</td><td>आओ</td><td>ಬರು → ಬಂದ</td></tr>
+<tr><td>bring</td><td>लाओ</td><td>ತರು → ತಂದ</td></tr>
+<tr><td>eat</td><td>खाओ</td><td>ತಿನ್ನು → ತಿಂದ</td></tr>
+<tr><td>give</td><td>दो</td><td>ಕೊಡು → ಕೊಟ್ಟ</td></tr>
+<tr><td>keep</td><td>रखो</td><td>ಇದು → ಇಟ್ಟ</td></tr>
+<tr><td>go</td><td>जाओ</td><td>ಹೋಗು → ಹೋದ</td></tr>
+<tr><td>become</td><td></td><td>ಆಗು → ಆದ</td></tr>
+<tr><td>buy</td><td>ख़रीदो</td><td>ಕೊಳ್ಳು → ಕೊಂಡ</td></tr>
+<tr><td>forget</td><td>भूल</td><td>ಮರೆ → ಮರೆತ</td></tr>
+<tr><td>steal</td><td>चुरा</td><td>ಕದಿ → ಕದ್ದ</td></tr>
+<tr><td>wait/protect</td><td></td><td>ಕಾ → ಕಾದ</td></tr>
+<tr><td>die</td><td>मारो</td><td>ಸಾ → ಸತ್ತ</td></tr>
+<tr><td>laugh</td><td>हँसो</td><td>ನಗು → ನಕ್ಕ</td></tr>
+<tr><td>learn</td><td>सीखो</td><td>ಕಲಿ → ಕಲಿತ</td></tr>
+<tr><td>cry</td><td>रो</td><td>ಅಳು → ಅತ್ತ</td></tr>
+</table>
+
+<h2>Verbal Participles</h2>
+<p>Used to join two or more verbs when they happen simultaneously or sequentially.
+They are used before verbs (unlike relative participles, which are used before nouns.)</p>
+<p>Rule to convert verb root to present verbal participle:</p>
+<ol>
+<li>ಉ-ending: append ತ್ತಾ.</li>
+<li>non-ಉ-ending: append ಯುತ್ತಾ.</li>
+</ol>
+<p>Rule to convert past relative participle to past verbal participle:</p>
+<ol>
+<li>Regular ಉ-ending: remove ದ.</li>
+<li>Non-ಉ-ending and irregular ಉ-ending: add ಉ.</li>
+<li>Exceptions: ಹೋಗು → ಹೋಗಿ, ಆಗು → ಆಗಿ.</li>
+</ol>
+<p>Examples of present verbal participle:</p>
+<ol>
+<li>The horse is <em>running and</em> walking. - घोड़ा <em>भाग रहा है और</em> चल रहा है। -
+    ಕುದುರೆ <em>ಓಡುತ್ತಾ</em> ಜಿಗಿಯುತ್ತದೆ.</li>
+<li>She came <em>singing</em>. - वह <em>गाते हुए</em> आई। - ಅವಳು <em>ಹಾಡುತ್ತಾ</em> ಬಂದಳು.</li>
+<li>They came dancing, singing, and laughing. -
+    वे नाचते, गाते, और हँसते हुए आए। - ಅವರು ಆಡುತ್ತಾ ಹಾಡುತ್ತಾ ನಗುತ್ತಾ ಬಂದರು.</li>
+</ol>
+<p>Examples of past verbal participle:</p>
+<ol>
+<li>The horse <em>ran and</em> jumped. - घोड़ा <em>भागा और</em> कूदा। - ಕುದುರೆ <em>ಓಡಿ</em> ಜಿಗಿಯಿತು.</li>
+<li>Having cleaned the house, I felt satisfied. -
+    घर साफ़ <em>करके</em> तृप्ति मिल गई। - ಮನೆ ಸ್ವಚ್ಛ <em>ಮಾಡಿ</em> ತೃಪ್ತಿ ಕೊಂಡ.</li>
+<li>After watching the movie, we had dinner outside. -
+    Movie <em>देखकर</em> हमने बाहर खाना खाया। - Movie <em>ನೋಡಿ</em>, ನಾವು ಹೊರಗಡೆ ರಾತ್ರಿ-ಊಟ ಮಾಡಿದೆವು.</li>
+</ol>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
