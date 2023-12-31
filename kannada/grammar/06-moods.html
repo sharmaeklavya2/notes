@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Moods</h1>
+<p>[source: <a href="https://www.youtube.com/watch?v=vY7Dio9edns">https://www.youtube.com/watch?v=vY7Dio9edns</a>, <a href="https://www.youtube.com/watch?v=25PfuZC1Hwg">https://www.youtube.com/watch?v=25PfuZC1Hwg</a>]</p>
+<p>(incomplete)</p>
+<h2>Infinitive</h2>
+<p>The infinitive form is usually used to indicate like, dislike, wish, or purpose.
+In English, 'to eat', 'to sleep', 'to sing' are infinitive forms
+of verbs eat, sleep, sing, respectively.</p>
+<p>There are three types of infinitive moods. Each has its own suffix.</p>
+<ol>
+<li>Type 1: used to indicate purpose. Suffix is ಅಲಿಕ್ಕೆ (proper) or ಅಕ್ಕೆ (colloquial).</li>
+<li>Type 2: used to indicate like/dislike. Suffix is ಅಲು.</li>
+<li>Type 3: used before modals. Suffix is ಅ.</li>
+</ol>
+<p>Converting verb root to infinitive mood:
+For ಉ-ending: remove ಉ and add suffix.
+For non-ಉ-ending: add ಯ್ and then add suffix.</p>
+<p>Type 1 examples:</p>
+<ol>
+<li>I'm going to the market <strong>to buy</strong> vegetables. -
+    मैं सब्ज़ी <strong>ख़रीदने</strong> बाज़ार जा रहा हूँ। -
+    ನಾನು ತರಕಾರಿಗಳು <strong>ಕೊಳ್ಳಲಿಕ್ಕೆ</strong> marketಗೆ ಹೋಗುತ್ತಾ ಇದ್ದೇನೆ.</li>
+<li>One needs a lot of money <strong>to study</strong> in a University. -
+    University में <strong>पढ़ने के लिए</strong> बहुत पैसा चाहिए। -
+    Universityಅಲ್ಲಿ <strong>ಕಲಿಯಲಿಕ್ಕೆ</strong> ತುಂಬಾ ಹಣ ಬೇಕು.</li>
+</ol>
+<p>Type 2 examples:</p>
+<ol>
+<li>I like <strong>to eat</strong> sweets. -
+    मुझे मिठाई <strong>खाना</strong> पसंद है। -
+    ನನಗೆ ಮದುರ ಬಕ್ಷ್ಯ <strong>ತಿನ್ನಲು</strong> ಇಷ್ಟ.</li>
+</ol>
+<p>Type 3 examples:</p>
+<ol>
+<li>May I <strong>come</strong> in? - क्या मैं अंदर <strong>आ</strong> सकता हूँ? -
+    ನಾನು <strong>ಬರ</strong> ಬಹುದ?</li>
+<li>You cannot <strong>go</strong>. - आप नहीं <strong>जा</strong> सकते। -
+    ನೀವು <strong>ಹೋಗ</strong> ಬಾರದು.</li>
+</ol>
+<h2>Imperative</h2>
+<p>Used for commands and requests.</p>
+<ol>
+<li>2nd person singluar:
+    <strong>Go</strong> there. - वहाँ <strong>जाओ</strong>. - ಅಲ್ಲಿ <strong>ಹೋಗು</strong>.</li>
+<li>2nd person plural:
+    <strong>Go</strong> there. - वहाँ <strong>जाइए</strong>. - ಅಲ್ಲಿ <strong>ಹೋಗಿ</strong>.</li>
+<li>1st person singular affirmative:
+    Let me <strong>go</strong> there. -
+    मैं वहाँ <strong>जाता</strong> हूँ। / मुझे वहाँ <strong>जाने</strong> दीजिए। -
+    ನಾನು ಅಲ್ಲಿ <strong>ಹೋಗಲಿ</strong>.</li>
+<li>1st person singular interrogative:
+    Should I <strong>go</strong> there? - वहाँ <strong>जाऊँ</strong>? -
+    ಅಲ್ಲಿ <strong>ಹೋಗ್-ಲಾ</strong>?</li>
+<li>1st person plural affirmative:
+    Let us <strong>go</strong> there. - वहाँ <strong>जाते</strong> हैं। -
+    ಅಲ್ಲಿ <strong>ಹೋಗೋಣ</strong>.</li>
+<li>1st person plural interrogative:
+    Should we <strong>go</strong> there? - वहाँ <strong>जाएँ</strong>? -
+    ಅಲ್ಲಿ <strong>ಹೋಗೋಣ್ವಾ</strong>?</li>
+</ol>
+<p>Other examples:</p>
+<ol>
+<li>Let it be. - रहने दो। - ಇರಲು.</li>
+<li>Let it be. - रहने दीजिये। - ಇರಲಿ.</li>
+</ol>
+<h2>Affirmative</h2>
+<p>(These are the normal tenses.
+They have already been covered in <a href="04-verbs.html">04-verbs.html</a>.)</p>
+<h2>Potential</h2>
+<h2>Obligative</h2>
+<h2>Conditional</h2>
+<h2>Negative</h2>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
