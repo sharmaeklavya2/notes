@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Modals</h1>
+<p>(draft)</p>
+<p>[source: <a href="https://www.youtube.com/watch?v=25PfuZC1Hwg">https://www.youtube.com/watch?v=25PfuZC1Hwg</a>]</p>
+<p>Modals:</p>
+<ol>
+<li>ಬಹುದು - सकता - can/may: willingness or ability or possibility</li>
+<li>ಸಾಧ್ಯವಿಲ್ಲ - नहीं सकता - cannot: inability. ಸಾಧ್ಯ literally means 'possible'.</li>
+<li>ಸಾಧ್ಯತೆ - सकता: possible.</li>
+<li>ಬಹುದಿತ್ತು - सका / सकता था - could: past ability. past tense of can. ಬಹುದು + ಇತ್ತು.</li>
+<li>ಇರ ಬಹುದು - हो सकता - can be.</li>
+<li>ಬಹುಶಃ - शायद [I'm not sure about this.]</li>
+<li>ಬಾರದು - नहीं सकते - cannot: prohibition</li>
+<li>ಕೂಡದು - नहीं सकते - cannot: prohibition, more intense than ಬಾರದು.</li>
+<li>ಬೇಕು - चाहिये: must / need to.</li>
+<li>ಬೇಡ - नहीं चाहिए: must not.</li>
+<li>ಬೇಕಾಗಿಲ್ಲ: don't need to.</li>
+<li>Past verbal participle + ಇರ ಬೇಕಾಗಿತ್ತು: should have</li>
+<li>Past verbal participle + ಇರ ಬಾರದಿತ್ತು: shouldn't have.</li>
+<li>ಆಗೋದಿಲ್ಲ - cannot: inability</li>
+</ol>
+<p>TODO: ಬಲ್ಲೆ and its conjugations.</p>
+<p>Examples:</p>
+<ol>
+<li>I can do. - मैं कर सकता हूँ। - ನಾನು ಮಾಡ ಬಹುದು. (ability or willingness)</li>
+<li>I can't do. - मैं नहीं कर सकता। - ನಾನು ಮಾಡ ಸಾಧ್ಯವಿಲ್ಲ. (A bit too formal. inability.)</li>
+<li>I can't do. - मुझसे नहीं होगा। - ನನ್ನಿಂದ ಆಗಲ್ಲ.
+    (Colloquial. inability/unwillingness. Can also say ಆಗುವುದಿಲ್ಲ instead of ಆಗಲ್ಲ.)</li>
+<li>He can come. - वह जा सकता है। - ಅವನು ಹೋಗ ಬಹುದು. (permission)</li>
+<li>It can happen. - वह हो सकता है। - ಅದು ಆಗ ಬಹುದು. (possibility)</li>
+<li>I cannot eat. - मुझसे नहीं खाया गया। - ನನ್ನಿಂದ ತಿನ್ನಕ್ಕೆ ಆಗಲ್ಲ. (unwillingness/inability)</li>
+<li>Last year I could do this work. - पिछले साल मैं ये काम कर सका। -
+    ಹೋದ ವರ್ಷದಲ್ಲಿ ನಾನು ಈ ಕೆಲಸ ಮಾಡ ಬಹುದಿತ್ತು.</li>
+<li>It may rain now. - अभी बारिश आ सकती है। - ಈಗ ಮಳೆ ಬರ ಬಹುದು.</li>
+<li>It's possible. - हो सकता है। - ಸಾಧ್ಯತೆ ಇರುತ್ತೆ.</li>
+<li>He may come later. - वह थोड़ी देर में आ सकता है। - ಅವನು ಸ್ವಲ್ಪ ಹೊತ್ತಿನ ನಂತರ ಬರ ಬಹುದು.</li>
+<li>She may know about the address. - उसे address के बारे में पता हो सकता है। -
+    ಅವಳಿಗೆ address ಬಗ್ಗೆ ಗೊತ್ತಿರ ಬಹುದು.</li>
+<li>They may not go now. - ಅವರು ಈಗ ಹೋಗದೆ ಇರ ಬಹುದು.</li>
+<li>The bus may have gone. - Bus गई हो सकती है। - Bus ಹೋಗಿ ಇರ ಬಹುದು.</li>
+<li>The bus may not have gone. - Bus नहीं गई हो सकती। - Bus ಹೋಗದೆ ಇರ ಬಹುದು.</li>
+<li>We may not stay there. - वहाँ हम नहीं रह सकते। -
+    ಅಲ್ಲಿ ನಾವು ಇರದೆ ಇರ ಬಹುದು. / ಅಲ್ಲಿ ನಾವು ಇರಕ್ಕೆ ಆಗೋದಿಲ್ಲ.</li>
+<li>It may happen again. - यह फिर हो सकता है। - ಇದು ಮತ್ತೆ ಆಗ ಬಹುದು.</li>
+<li>You cannot go there. - आप वहाँ नहीं जा सकते। - ನೀವು ಅಲ್ಲಿ ಹೋಗ ಬಾರದು. (prohibition)</li>
+<li>You may have heard it before. -
+    तुमने यह पहले सुना होगा। - ನೀನು ಇದನ್ನು ಹಿಂದೆ ಕೇಳಿರ ಬಹುದು. (ಕೆಳ + ಇರ)</li>
+<li>You may not have heard it before. -
+    तुमने यह पहले नहीं सुना होगा। - ನೀನು ಇದನ್ನು ಹಿಂದೆ ಕೇಳದಿರ ಬಹುದು. (ಕೇಳದೆ + ಇರ)</li>
+<li>I should have listened to you. -
+    तुम्हारी बात मुझे सुननी चाहिए थी। - ನಿನ್ನ ಮಾತು ನಾನು ಕೇಳಿರ ಬೇಕಾಗಿತ್ತು.</li>
+<li>She should not have said that. -
+    उसे यह नहीं कहना चाहिए था। - ಅವಳು ಇದು ಹೇಳಿರ ಬಾರದಿತ್ತು.</li>
+<li>I don't have to go to office tomorrow. -
+    कल office नहीं जाना पड़ेगा। - ನಾಳೆ officeಗೆ ಹೋಗ ಬೇಕಾಗಿಲ್ಲ.</li>
+</ol>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
