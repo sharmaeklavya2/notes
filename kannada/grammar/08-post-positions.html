@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Post Positions</h1>
+<p>[source:
+<a href="https://www.youtube.com/watch?v=I5451A5sP-I">https://www.youtube.com/watch?v=I5451A5sP-I</a>,
+<a href="https://www.youtube.com/watch?v=HCmz6FJTG48">https://www.youtube.com/watch?v=HCmz6FJTG48</a>]</p>
+<p>(incomplete)</p>
+<p>A post-position is a group of letters or words appended to a verb
+(or sometimes a noun) to give additional meaning.</p>
+<h2>ವುದು</h2>
+<p>Converts a verb to a noun. This noun can have two meanings, depending on context:</p>
+<ol>
+<li>Type 1: The act of doing the verb.</li>
+<li>Type 2: The person/entity doing the verb.
+    Like appending 'वाला' in Hindi.</li>
+</ol>
+<p>Once the verb becomes a noun, ವಿಭಕ್ತಿs can be added to it.</p>
+<p>To use this post-position, append ಯು to the verb if it's not ಉ-ending, and then append ವುದು.</p>
+<p>Type 1 examples:</p>
+<ol>
+<li>I like <strong>running</strong>. - मुझे <strong>भागना</strong> पसंद है। - ನನಗೆ <strong>ಓಡುವುದು</strong> ಇಷ್ಟ.</li>
+<li><strong>Studying</strong> well is every student's duty. -
+    अच्छे से <strong>पढ़ना</strong> हर विद्यार्थी का कर्तव्य है। -
+    ಚೆನ್ನಾಗಿ <strong>ಓದುವುದು</strong> ಒಬ್ಬೊಬ್ಬ ವಿದ್ಯಾರ್ಥಿಯ ಕರ್ತವ್ಯ.</li>
+<li>I need a holiday from coding. - Coding करने से छुट्टी चाहिए। -
+    Coding ಮಾಡುವುದಿಂದ ರಜೆ ಬೇಕು.</li>
+</ol>
+<p>Type 2 example:</p>
+<p>The one who is going there, is he your brother? -
+वहाँ <strong>जाने वाला</strong> तुम्हारा भाई है क्या? -
+ಅಲ್ಲಿ <strong>ಹೋಗುವುದು</strong> ನಿನ್ನ ತಮ್ಮನಾ?</p>
+<h2>ಇದ್ದು</h2>
+<p>Converts a verb to a noun. This noun can have two meanings, depending on context:</p>
+<ol>
+<li>Type 1: The act that was performed.</li>
+<li>Type 2: The person/entity who did the verb.</li>
+</ol>
+<p>To use this post-position, append ಇದ್ದು to the verb's past verbal participle.</p>
+<p>Examples:</p>
+<ol>
+<li>What you did yesterday was wrong. -
+    तुमने कल जो किया वो बहुत गलत था।
+    ನೀನು ನಿನ್ನೆ ಮಾಡಿದ್ದು ತುಂಬಾ ತಪ್ಪು.</li>
+</ol>
+<p>(TODO: add more examples.)</p>
+<h2>ಆಗ (while)</h2>
+<p>Used to denote the time when an action is taking place.
+It's like adding 'when' or 'while' in English.</p>
+<p>ಆಗ can be added to any of the 9 tenses. Conjugation rule:</p>
+<table>
+<tr><th></th><th>Present and Future</th><th>Past</th></tr>
+<tr><td>Simple</td><td>Present RP + ಆಗ</td><td>Past RP + ಆಗ</td></tr>
+<tr><td>Continuous</td><td>Present VP + ಇರುವಾಗ</td><td>Present VP + ಇದ್ದಾಗ</td></tr>
+<tr><td>Perfect</td><td>?</td><td>Past VP + ಇದ್ದಾಗ</td></tr>
+</table>
+
+<p>Examples:</p>
+<ol>
+<li>When you go to the market, please get me some vegetables. -
+    जब Market की ओर जाओ तो मेरे लिए कुछ सब्ज़ियाँ ख़रीद लाना। -
+    Market-ಕಡೆ <strong>ಹೋಗುವಾಗ</strong> ನನಗೆ ಕೆಲವು ತರಕಾರಿಗಳು ಕೊಂಡು ಕೊಡಿ.</li>
+<li>When I was working, I heard a noise. -
+    जब मैं काम कर रहा था, मैंने एक आवाज़ सुनी। -
+    ನಾನು ಕೆಲಸ <strong>ಮಾಡುತ್ತಾ ಇದ್ದಾಗ</strong>, ಒಂದು ಸದ್ದು ಕೇಳಿದೆನು.</li>
+<li>ನಾನು ಹೋಗಿದ್ದಾಗ - मैं जब जा चुका था। - when I had gone</li>
+<li>ನಾನು ಅಲ್ಲಿ ಇದ್ದಾಗ - मैं जब वहाँ था। - when I was there</li>
+</ol>
+<h2>ಮೇಲೆ</h2>
+<p>Roughly translates to 'के बाद' in Hindi. Added to Past RP of verb.</p>
+<p>Examples:</p>
+<ol>
+<li>ಆದ ಮೇಲೆ - होने के बाद - after happening.</li>
+<li>ಅಂದ ಮೇಲೆ - कहने के बाद - after saying / after establishing.</li>
+<li>After so much has happened, it's not right for me to stay here. -
+    इतना होने के बाद मेरा यहाँ रहना ठीक नहीं है। -
+    ಇಷ್ಟು ಆಡ ಮೇಲೆ, ನಾನು ಇಲ್ಲಿ ಇರುವುದು ಸರಿಯಲ್ಲ.</li>
+<li>If you say it's a big house, then they must have a lot of money too. -
+    तुम कह रहे हो कि बड़ा घर है तो पैसा भी अच्छा ही होगा। -
+    ದೊಡ್ಡ ಮನೆ ಅಂದ ಮೇಲೆ, ದುಡ್ಡೂ ಚೆನ್ನಾಗಿಯೇ ಇರುತ್ತದೆ.</li>
+</ol>
+<h2>ಕೊಳ್ಳು / ಕೊಂದ</h2>
+<p>Used to indicate that an action is done on oneself.</p>
+<p>Past verbal participle + appropriate conjugation of ಕೊಳ್ಳು.</p>
+<ol>
+<li>Put on your shirt. - Shirt ಹಾಕಿಕೊಳ್ಳು.</li>
+<li>Keep it in your house or a few days. -
+    कुछ दिन अपने घर में रखिए। -
+    ಸ್ವಲ್ಪ ದಿನ ನೀಮಾ ಮನೆಯಲ್ಲಿ ಇಟ್ಟುಕೊಳ್ಳಿ.</li>
+</ol>
+<h2>ಕೊಡು</h2>
+<p>Asking others to do something for you.</p>
+<p>Past verbal participle of verb + Conjugation of ಕೊಡು.</p>
+<p>Sometimes it changes the meaning of the preceeding verb,
+e.g., ಹೇಳು + ಕೊಡು = teach.</p>
+<h2>ಬಿಡು</h2>
+<p>Indicates that an action was done quickly, unexpectedly, or involuntary.</p>
+<p>Past VP + conjugation of ಬಿಡು.</p>
+<ol>
+<li>I slept. - मैं सो गया। - ನಾನು ಮಲಗಿಬಿಟ್ಟೆನು.</li>
+</ol>
+<h2>ಆಗು - active to passive voice</h2>
+<p>To write something in passive voice, use the first person imperative form
+of the verb, and append a conjugation of ಆಗು.</p>
+<ol>
+<li>The work was done by me. - काम मुझसे हुआ। - ಕೆಲಸ ನನ್ನಿಂದ ಮಾಡಲಾಯಿತು.</li>
+</ol>
+<h2>ಆಗು - noun to verb converter</h2>
+<p>Any noun representing an emotion or feeling can be converted to a verb
+by adding (a conjugation of ಆಗು).</p>
+<ol>
+<li>I got hungry. - मुझे भूक लगी। - ನನಗೆ ಹಸಿವು ಆಯಿತು.</li>
+</ol>
+<h2>ಪಡು - experience, endure</h2>
+<p>Past RP of ಪಡು is ಪಟ್ಟ.</p>
+<ol>
+<li>I endured hardship. - मैंने परेशानी सही। - ನಾನು ಕಷ್ಟ ಪಟ್ಟೆನು.</li>
+</ol>
+<h2>ಇಂದ</h2>
+<p>Past RP + ಇಂದ : because of</p>
+<p>Present RP + ಇಂದ : by doing something</p>
+<ol>
+<li>I didn't get anything by watching this movie. -
+    ये movie देखकर कोई भी फ़ायदा नहीं हुआ। -
+    ಈ movie ನೋಡಿದರಿಂದ ಏನೂ ಲಾಭವು ಇರಲಿಲ್ಲ.</li>
+</ol>
+<h2>ಅಂತೆ - like / as per</h2>
+<ol>
+<li>We did what you said. - आपने जैसे बताया हमने वैसे किया। - ನೀವು ಹೇಳಿದಂತೆ ನಾವು ಮಾಡಿದೆವು.</li>
+<li>He talks like a wise person. - वह बुद्धिमान व्यक्ति की तरह बात करता है। -
+    ಅವನು ಬುದ್ಧಿವಂತರಿಂತೆ ಮಾತಾಡುತ್ತಾನೆ.</li>
+</ol>
+<h2>ಅಂಥ - जैसा</h2>
+<ol>
+<li>ನಂದವನದಂಥ ಊರು - बाग़ीचे जैसा गाँव - a town like a garden</li>
+</ol>
+<h2>ವಂತ - possessor of</h2>
+<ol>
+<li>Wise person - ಬುದ್ಧಿವಂತ.</li>
+<li>Rich person - ಶ್ರೀಮಂತ.</li>
+</ol>
+<h2>ತನ - 'ness'</h2>
+<ol>
+<li>ಒಳ್ಳೆಯತನ = goodness</li>
+<li>ದೊಡ್ಡತನ = largeness</li>
+<li>ಕೆಟ್ಟತನ = badness</li>
+</ol>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
