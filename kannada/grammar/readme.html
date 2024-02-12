@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Kannada Grammar notes</h1>
+<p>These are my notes on important grammatical concepts about the Kannada language.
+They are mostly based <a href="https://www.youtube.com/playlist?list=PLTxAYLa10QKPQQtkRqM7nltjHIEwEPTBC">@correctKannada's YouTube series</a>.
+The primary audience of these notes is people who can read/write both English and Hindi,
+but I think even non-Hindi speakers can benefit from them.</p>
+<p>There are two main reasons why I wrote these notes:</p>
+<ol>
+<li>Reading them is easier and faster than rewatching the videos.
+    Some concepts are spread across multiple videos in the series,
+    and it's hard to quickly find stuff in videos.</li>
+<li>Kannada's grammar is very similar to Hindi and very different from English.
+    Hence, it's easier to learn Kannada from Hindi than from English.
+    However, I couldn't find any good sources that teach Kannada from Hindi.
+    Hence, I learned from this video series (that teach Kannada from English) and 'Hindified' it,
+    i.e., translated its (English) sentences to Hindi and used those to infer a mapping between
+    Kannada words and concepts to their Hindi equivalents.</li>
+</ol>
+<p>These notes use the Devanagari script for Hindi and the Kannada script for Kannada.
+Even if your main reason for learning Kannada is only to speak it,
+I still recommend that you learn the Kannada script.
+This is because many useful resources (e.g., Google translate,
+@correctKannada's video series, children's textbooks) use the Kannada script.
+Learning the script will probably take 2-4 weeks with
+<a href="https://en.wikipedia.org/wiki/Spaced_repetition">spaced repetition</a>),
+which is much less than the time it will take you to properly learn Kannada.
+Nevertheless, these pages use a tool called <a href="https://sharmaeklavya2.github.io/trin/">Trin</a>
+to transliterate Kannada to Devanagari (look out for the
+ट्र
+icon in the notes), so you can start reading them even without first learning the Kannada script.</p>
+<p>These notes only cover grammar. You'd need to pick up vocabulary from elsewhere, e.g.,
+the <a href="https://en.wikibooks.org/wiki/Kannada">Kannada wikibook</a>.
+I recommend using a spaced-repetition app like <a href="https://apps.ankiweb.net">Anki</a> to memorize stuff.</p>
+</body>
+</html>

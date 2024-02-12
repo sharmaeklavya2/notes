@@ -5,32 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="dark light" />
 <style>
-html {font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;}
-body {margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;}
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
 a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
 @media (max-width: 820px) {
     body {padding: 0 1em;}
     ul {padding-left: 1em;}
     ol {padding-left: 1.2em;}
 }
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
 
-/* color scheme */
-body {color: #202020;}
-a {color: #1a0dab;}
-a:visited {color: #681da8;}
-@media (prefers-color-scheme: dark) {
-    body {background: #1b1e20; color: #c8c8c8;}
-    a {color: #8ab4f8;}
-    a:visited {color: #c58af9;}
-    img {filter: brightness(.8) contrast(1.2);}
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
 }
 </style>
 </head>
 <body>
 <h1>Notes from Kannada lectures</h1>
-<p>I'm watching a <a href="https://www.youtube.com/playlist?list=PLOb5Wwt1GhOmfwBXC5IGuDvtNc-Ub8N1c">YouTube playlist</a>
+<p>I <s>am</s> was watching <a href="https://www.youtube.com/playlist?list=PLOb5Wwt1GhOmfwBXC5IGuDvtNc-Ub8N1c">Kannada TV's YouTube playlist</a>
 to learn Kannada from Hindi. I'll write down notes from each video because
 reading these notes is easier and faster than rewatching the videos.</p>
+<p><strong>Update</strong>: I have switched to a different strategy for learning Kannada.
+I don't think this video series is useful after the first few videos. I recommend
+<a href="https://www.youtube.com/playlist?list=PLTxAYLa10QKPQQtkRqM7nltjHIEwEPTBC">@correctKannada's YouTube series</a> instead.
+You can find my notes for that series <a href="../grammar/">here</a>.</p>
 <p>In Kannada (and also in Hindi), spelling is a very reliable guide to pronunciation.
 Hence, I'll write Kannada in the Kannada script (unlike the videos, which use English characters).
 However, I'm only interested in learning spoken Kannada, and not written Kannada,
