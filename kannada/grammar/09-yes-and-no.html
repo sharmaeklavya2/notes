@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Details on Yes and No</h1>
+<ol>
+<li>yes - हाँ - ಹೌದು/ಹು</li>
+<li>no - नहीं/ना - ಇಲ್ಲ/ಅಲ್ಲ</li>
+<li>ok/correct - ठीक - ಸರಿ</li>
+<li>without - (के) बिना - ಅಲ್ಲದ/ಅಲ್ಲದೆ</li>
+</ol>
+<p>Etymology:</p>
+<ol>
+<li>ಹೌದು and ಅಲ್ಲ are derived from the verb ಅಹು, which roughly means
+"it has that quality/nature".</li>
+<li>ಇಲ್ಲ is derived from the verb ಇರು, which rougly means
+"it is / it exists".</li>
+</ol>
+<h2>ಇಲ್ಲ vs ಅಲ್ಲ</h2>
+<p>ಇಲ್ಲ is used to denote the absence of an entity,
+and ಅಲ್ಲ is used to denote the absence of a quality in the entity. E.g.,</p>
+<ol>
+<li>Dad is not at home. - पापा घर पर नहीं हैं। - ಅಪ್ಪ ಮನೆಯಲ್ಲಿಲ್ಲ.</li>
+<li>He is not my dad. - वे मेरे पापा नहीं हैं। - ಅವರು ನನ್ನ ತಂದೆ ಅಲ್ಲ.</li>
+<li>I don't have a pen. - मेरे पास pen नहीं है। - ನನ್ನ ಹತ್ತಿರ pen ಇಲ್ಲ.</li>
+<li>My pen is not blue. - मेरा pen नीला नहीं है। - ನನ್ನ pen ನೀಲಿ ಅಲ್ಲ.</li>
+</ol>
+<h2>Negative participles</h2>
+<p>There are two words to represent without: ಅಲ್ಲದ and ಅಲ್ಲದೆ.
+ಅಲ್ಲದ is the negative relative participle (used for adjectivfication),
+and ಅಲ್ಲದೆ is the negative verbal participle (used to denote sequential/concurrent action). E.g.,</p>
+<ol>
+<li>coffee without sugar - बिना चीनी की coffee - ಸಕ್ಕರೆ ಅಲ್ಲದ coffee.</li>
+</ol>
+<p>(TODO: add more examples)</p>
+</body>
+</html>
