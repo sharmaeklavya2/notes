@@ -36,6 +36,7 @@ a:visited {color: var(--vlink-color);}
 }
 table {border-collapse: collapse;}
 td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+thead th, .sticky th {position: sticky; top: 0; background-color: var(--bg-color);}
 
 /* extra */
 h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
@@ -102,23 +103,18 @@ but some exceptions exist (called irregular nouns).</p>
 </ol>
 <p>
 <table>
-<thead>
 <tr><th>Sno</th><th>कारक</th><th>ఇ-ending</th><th>non-ఇ-ending</th></tr>
-</thead>
-<tbody>
 <tr><td>2</td><td>कर्म</td><td>Xని</td><td>Xను</td></tr>
 <tr><td>3</td><td>करण</td><td colspan="2">Xతో</td></tr>
 <tr><td>4a</td><td rowspan="2">संप्रदान</td><td>Xకి</td><td>Xకు</td></tr>
 <tr><td>4b</td><td colspan="2">X కోసం</td></tr>
 <tr><td>5</td><td>अपादान</td><td colspan="2">X నుండి / X నుంచి</td></tr>
 <tr><td>7</td><td>अधिकरण</td><td colspan="2">Xలో</td></tr>
-</tbody>
 </table>
 </p>
 
 <p>Examples:</p>
 <table>
-<thead>
 <tr>
 <th>(1) कर्ता</th>
 <th>(2) कर्म</th>
@@ -129,8 +125,6 @@ but some exceptions exist (called irregular nouns).</p>
 <th>(7) अधिकरण</th>
 <th>हिंदी</th>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>గోడ</td>
 <td>గోడను</td>
@@ -151,7 +145,6 @@ but some exceptions exist (called irregular nouns).</p>
 <td>రవిలో</td>
 <td>रवि</td>
 </tr>
-</tbody>
 </table>
 
 <h2>Irregular Nouns</h2>
@@ -165,7 +158,6 @@ but some exceptions exist (called irregular nouns).</p>
 
 <p>Nouns that are <span class="danger">irregular</span> because of other कारकs:</p>
 <table>
-<thead>
 <tr>
 <th>(1) कर्ता</th>
 <th>(2) कर्म</th>
@@ -176,8 +168,6 @@ but some exceptions exist (called irregular nouns).</p>
 <th>हिंदी</th>
 <th>english</th>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>పుస్తకం</td>
 <td class="danger">పుస్తకాన్ని</td>
@@ -190,15 +180,24 @@ but some exceptions exist (called irregular nouns).</p>
 </tr>
 <tr>
 <td>గుడి</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>గుడిని</td>
+<td>గుడితో</td>
+<td>గుడికి</td>
 <td>గుడి</td>
 <td class="danger">గుళ్లో</td>
 <td>मंदिर</td>
 <td>temple</td>
 </tr>
-</tbody>
+<tr>
+<td>ఊరు</td>
+<td>ఊరును</td>
+<td>ఊరుతో</td>
+<td>ఊరుకు</td>
+<td>ఊరు</td>
+<td class="danger">ఊళ్లో</td>
+<td>-</td>
+<td>town</td>
+</tr>
 </table>
 
 <h2>Personal Pronouns</h2>
@@ -406,6 +405,33 @@ and the possessee's effective pronoun's X कारक.</p>
     = वह <strong>मेरी में</strong> है।
     = అతను <strong>నాదానిలో</strong> ఉన్నాడు.</li>
 </ul>
+<h2>Noun Plurals</h2>
+<p>Generally, we pluralize a noun by adding లు.
+E.g., అబ్బాయి (लड़का) → అబ్బాయిలు (लड़के).</p>
+<p>Exceptions:</p>
+<ul>
+<li>Xట్టు → Xట్లు. E.g., చెట్టు (tree) → చెట్లు (trees).</li>
+<li>Xఅం → Xఆలు. E.g., పుస్తకం (book) → పుస్తకాలు (books).</li>
+</ul>
+<p>
+<table>
+<thead>
+<tr><th>हिंदी</th><th>singluar</th><th>plural</th></tr>
+</thead>
+<tbody>
+<tr><td>घर</td><td>ఇల్లు</td><td>ఇళ్లు</td></tr>
+<tr><td>मंदिर</td><td>గుడి</td><td>గుళ్లు</td></tr>
+<tr><td>आँख</td><td>కన్ను</td><td>కళ్లు</td></tr>
+<tr><td>दोस्त</td><td>స్నేహితుడు</td><td>స్నేహితులు</td></tr>
+<tr><td>बिल्ली</td><td>పిల్లి</td><td>పిల్లులు</td></tr>
+<tr><td>फूल</td><td>పువ్వు</td><td>పూలు</td></tr>
+<tr><td>साल</td><td>ఏడు</td><td>ఏళ్లు</td></tr>
+<tr><td>हाथ</td><td>చెయ్యి</td><td>చేతులు</td></tr>
+<tr><td>फल</td><td>పండు</td><td>పళ్లు</td></tr>
+</tbody>
+</table>
+</p>
+
 <script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
 </body>
 </html>
