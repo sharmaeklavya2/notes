@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Nouns, pronouns, and case (कारक / విభక్తి)</h1>
+<p>[source: <a href="https://archive.org/details/dli.language.2300">https://archive.org/details/dli.language.2300</a>]</p>
+<p>We will look at different kinds of pronouns,
+and how to apply case / कारक / విభక్తి to nouns and pronouns.
+Prior knowledge of either
+<a href="https://en.wikipedia.org/wiki/Grammatical_case">grammatical case</a> in English
+or <a href="https://hi.wikipedia.org/wiki/%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%95">कारक</a> in हिंदी
+is useful.</p>
+<p>The table below describes the कारकs we will consider.</p>
+<p>
+<table>
+<thead>
+<tr><th>Sno</th><th>case</th><th>कारक</th><th>english</th><th>हिंदी</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>nominative</td><td>कर्ता</td><td>X</td><td>X</td></tr>
+<tr><td>2</td><td>accusative</td><td>कर्म</td><td>to X</td><td>X को</td></tr>
+<tr><td>3a</td><td rowspan="2">instrumental</td><td rowspan="2">करण</td><td>using X / by X</td><td>X से</td></tr>
+<tr><td>3b</td><td>with X</td><td>X के साथ</td></tr>
+<tr><td>4a</td><td rowspan="2">dative</td><td rowspan="2">संप्रदान<td>to X</td><td>X को</td></tr>
+<tr><td>4b</td><td>for X</td><td>X के लिए</td></tr>
+<tr><td>5</td><td>ablative</td><td>अपादान</td><td>from X</td><td>X से</td></tr>
+<tr><td>6</td><td>genitive</td><td>संबंध</td><td>X's</td><td>X का</td></tr>
+<tr><td>7</td><td>locative</td><td>अधिकरण</td><td>in X</td><td>X में</td></tr>
+<tr><td>8</td><td>vocative</td><td>संबोधन</td><td>X!</td><td>X!</td></tr>
+</tbody>
+</table>
+</p>
+
+<h2>General process</h2>
+<p>We describe the general process for applying कारक in Telugu.
+This process works for most nouns (called regular nouns)
+but some exceptions exist (called irregular nouns).</p>
+<ol>
+<li>कर्ता कारक: no change.</li>
+<li>संबंध कारक: If the word ends in డు, change the డు to డి. Otherwise, no change.</li>
+<li>Other कारक: Convert the word to its संबंध कारक X and then apply the appropriate suffix (using संधि) from the table below, depending on whether X ends with ఇ.</li>
+</ol>
+<p>
+<table>
+<thead>
+<tr><th>Sno</th><th>कारक</th><th>ఇ-ending</th><th>non-ఇ-ending</th></tr>
+</thead>
+<tbody>
+<tr><td>2</td><td>कर्म</td><td>Xని</td><td>Xను</td></tr>
+<tr><td>3</td><td>करण</td><td colspan="2">Xతో</td></tr>
+<tr><td>4a</td><td rowspan="2">संप्रदान</td><td>Xకి</td><td>Xకు</td></tr>
+<tr><td>4b</td><td colspan="2">X కోసం</td></tr>
+<tr><td>5</td><td>अपादान</td><td colspan="2">X నుండి / X నుంచి</td></tr>
+<tr><td>7</td><td>अधिकरण</td><td colspan="2">Xలో</td></tr>
+</tbody>
+</table>
+</p>
+
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>(1) कर्ता</th>
+<th>(2) कर्म</th>
+<th>(3) करण</th>
+<th>(4a) संप्रदान</th>
+<th>(5) अपादान</th>
+<th>(6) संबंध</th>
+<th>(7) अधिकरण</th>
+<th>हिंदी</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>గోడ</td>
+<td>గోడను</td>
+<td>గోడతో</td>
+<td>గోడకు</td>
+<td>గోడ నుండి</td>
+<td>గోడ</td>
+<td>గోడలో</td>
+<td>दीवार</td>
+</tr>
+<tr>
+<td>రవి</td>
+<td>రవిని</td>
+<td>రవితో</td>
+<td>రవికి</td>
+<td>రవి నుండి</td>
+<td>రవి</td>
+<td>రవిలో</td>
+<td>रवि</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Irregular Nouns</h2>
+<p>Nouns that are irregular because of their संबंध कारक:</p>
+<table>
+<tr><th>తెలుగు</th><th>संबंध कारक</th><th>हिंदी</th><th>english</th></tr>
+<tr><td>ఇల్లు</td><td>ఇంటి</td><td>घर</td><td>house</td></tr>
+<tr><td>కన్ను</td><td>కంటి</td><td>आँख</td><td>eye</td></tr>
+<tr><td>చెయ్యి</td><td>చేతి</td><td>हाथ</td><td>hand</td></tr>
+</table>
+
+<p>Nouns that are <span class="danger">irregular</span> because of other कारकs:</p>
+<table>
+<thead>
+<tr>
+<th>(1) कर्ता</th>
+<th>(2) कर्म</th>
+<th>(3) करण</th>
+<th>(4a) संप्रदान</th>
+<th>(6) संबंध</th>
+<th>(7) अधिकरण</th>
+<th>हिंदी</th>
+<th>english</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>పుస్తకం</td>
+<td class="danger">పుస్తకాన్ని</td>
+<td>పుస్తకంతో</td>
+<td class="danger">పుస్తకానికి</td>
+<td>పుస్తకం</td>
+<td>పుస్తకంలో</td>
+<td>पुस्तक</td>
+<td>book</td>
+</tr>
+<tr>
+<td>గుడి</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>గుడి</td>
+<td class="danger">గుళ్లో</td>
+<td>मंदिर</td>
+<td>temple</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Personal Pronouns</h2>
+<p>We use different personal pronouns in Telugu depending on person (first, second, third), number (singular, plural), respect (informal, respectful), gender (male, female, neuter), and distance (near, far).</p>
+<p>Only third person pronouns have gender associated with them.
+Verb conjugations and విభక్తి do not depend on distance.
+Telugu has two 'we's: see <a href="https://en.wikipedia.org/wiki/Clusivity">wikipedia:Clusivity</a>.</p>
+<table>
+<thead>
+<tr>
+<th>తెలుగు</th><th>हिन्दी</th><th>english</th><th>person</th><th>distance</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>నేను</td><td>मैं</td><td>I</td><td>1st</td><td>-</td><td>-</td></tr>
+<tr><td>మేం / మేము</td><td>हम</td><td>we</td><td>1st</td><td>-</td><td>exclusive</td></tr>
+<tr><td>మనం / మనము</td><td>हम</td><td>we</td><td>1st</td><td>-</td><td>inclusive</td></tr>
+<tr><td>నువ్వు</td><td>तुम</td><td>you</td><td>2nd</td><td>-</td><td>singular and informal</td></tr>
+<tr><td>మీరు</td><td>आप</td><td>you</td><td>2nd</td><td>-</td><td>plural or formal</td></tr>
+<tr><td>ఇతను</td><td>यह</td><td>he</td><td>3rd</td><td>near</td><td>informal</td></tr>
+<tr><td>అతను</td><td>वह</td><td>he</td><td>3rd</td><td>far</td><td>informal</td></tr>
+<tr><td>ఈయన</td><td>ये</td><td>he</td><td>3rd</td><td>near</td><td>formal</td></tr>
+<tr><td>ఆయన</td><td>वे</td><td>he</td><td>3rd</td><td>far</td><td>formal</td></tr>
+<tr><td>వీడు</td><td>यह</td><td>he</td><td>3rd</td><td>near</td><td>very informal</td></tr>
+<tr><td>వాడు</td><td>वह</td><td>he</td><td>3rd</td><td>far</td><td>very informal</td></tr>
+<tr><td>ఈమె</td><td>यह</td><td>she</td><td>3rd</td><td>near</td><td>informal</td></tr>
+<tr><td>ఆమె</td><td>वह</td><td>she</td><td>3rd</td><td>far</td><td>informal</td></tr>
+<tr><td>ఈవిడ</td><td>ये</td><td>she</td><td>3rd</td><td>near</td><td>formal</td></tr>
+<tr><td>ఆవిడ</td><td>वे</td><td>she</td><td>3rd</td><td>far</td><td>formal</td></tr>
+<tr><td>ఇది</td><td>यह</td><td>she</td><td>3rd</td><td>near</td><td>very informal</td></tr>
+<tr><td>అది</td><td>वह</td><td>she</td><td>3rd</td><td>far</td><td>very informal</td></tr>
+<tr><td>వీళ్లు</td><td>ये</td><td>they</td><td>3rd</td><td>near</td><td>plural people</td></tr>
+<tr><td>వాళ్లు</td><td>वे</td><td>they</td><td>3rd</td><td>far</td><td>plural people</td></tr>
+<tr><td>ఇది</td><td>यह</td><td>it</td><td>3rd</td><td>near</td><td>singular neuter</td></tr>
+<tr><td>అది</td><td>वह</td><td>it</td><td>3rd</td><td>far</td><td>singular neuter</td></tr>
+<tr><td>ఇవి</td><td>ये</td><td>these</td><td>3rd</td><td>near</td><td>plural neuter</td></tr>
+<tr><td>అవి</td><td>वे</td><td>those</td><td>3rd</td><td>far</td><td>plural neuter</td></tr>
+</tbody>
+</table>
+
+<p>Pronouns are irregular for संबंध कारक and कर्म कारक.</p>
+<table>
+<thead>
+<tr>
+<th>(1) कर्ता</th>
+<th>(2) कर्म</th>
+<th>(3) करण</th>
+<th>(4a) संप्रदान</th>
+<th>(5) अपादान</th>
+<th><strong>(6) संबंध</strong></th>
+<th>(7) अधिकरण</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>నేను</strong></td>
+<td>నన్ను</td>
+<td>నాతో</td>
+<td>నాకు</td>
+<td>నానుండి</td>
+<td><strong>నా</strong></td>
+<td>నాలో</td>
+</tr>
+<tr>
+<td><strong>మేం</strong></td>
+<td>మమ్మల్ని</td>
+<td>మాతో</td>
+<td>మాకు</td>
+<td>మానుండి</td>
+<td><strong>మా</strong></td>
+<td>మాలో</td>
+</tr>
+<tr>
+<td><strong>మనం</strong></td>
+<td>మనల్ని</td>
+<td>మనాతో</td>
+<td>మనకు</td>
+<td>మననుండి</td>
+<td><strong>మన</strong></td>
+<td>మనలో</td>
+</tr>
+<tr>
+<td><strong>నువ్వు</strong></td>
+<td>నిన్ను</td>
+<td>నీతో</td>
+<td>నీకు</td>
+<td>నీనుండి</td>
+<td><strong>నీ</strong></td>
+<td>నీలో</td>
+</tr>
+<tr>
+<td><strong>మీరు</strong></td>
+<td>మిమ్మల్ని</td>
+<td>మీతో</td>
+<td>మీకు</td>
+<td>మీనుండి</td>
+<td><strong>మీ</strong></td>
+<td>మీలో</td>
+</tr>
+<tr>
+<td><strong>అతను</strong></td>
+<td>అతన్ని</td>
+<td>అతనితో</td>
+<td>అతనికి</td>
+<td>అతని నుండి</td>
+<td><strong>అతని</strong></td>
+<td>అతనిలో</td>
+</tr>
+<tr>
+<td><strong>ఆమె</strong></td>
+<td>ఆమెను</td>
+<td>ఆమెతో</td>
+<td>ఆమెకు</td>
+<td>ఆమె నుండి</td>
+<td><strong>ఆమె</strong></td>
+<td>ఆమెలో</td>
+</tr>
+<tr>
+<td><strong>వాళ్లు</strong></td>
+<td>వాళ్లని</td>
+<td>వాళ్లతో</td>
+<td>వాళ్లకు</td>
+<td>వాళ్ల నుండి</td>
+<td><strong>వాళ్ల</strong></td>
+<td>వాళ్లలో</td>
+</tr>
+<tr>
+<td><strong>అది</strong></td>
+<td>దానిని</td>
+<td>దానితో</td>
+<td>దానికి</td>
+<td>దాని నుండి</td>
+<td><strong>దాని</strong></td>
+<td>దానిలో / <span class="danger">అందులో</span></td>
+</tr>
+<tr>
+<td><strong>అవి</strong></td>
+<td>వాటిని</td>
+<td>వాటితో</td>
+<td>వాటికి</td>
+<td>వాటి నుండి</td>
+<td><strong>వాటి</strong></td>
+<td>వాటిలో</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Reflexive pronouns</h2>
+<p>Telugu doesn't have reflexive pronouns.</p>
+<p>Example: I looked at <strong>myself</strong>.
+    = मैंने <strong>खुदको</strong> देखा।
+    = నేను నన్ను చూసుకున్నాను.</p>
+<h2>Demonstrative Pronouns and Adjectives</h2>
+<p>The demonstrative adjectives are ఈ for near and ఆ for far.</p>
+<p>Example:
+    <strong>This</strong> book is mine.
+    = <strong>यह</strong> पुस्तक मेरी है।
+    = <strong>ఈ</strong> పుస్తకం నాది.</p>
+<p>The demonstrative prounouns are the same as the neuter personal pronouns.</p>
+<p>Example:
+    <strong>This</strong> is my book.
+    = <strong>यह</strong> मेरी पुस्तक है।
+    = <strong>ఇది</strong> నా పుస్తకం.</p>
+<h2>Possessive Pronouns and Adjectives</h2>
+<p>Possessive adjectives are the same as the संबंध कारक.</p>
+<p>Example:
+    This is <strong>my</strong> book.
+    = यह <strong>मेरी</strong> पुस्तक है।
+    = ఇది <strong>నా</strong> పుస్తకం.</p>
+<p>Posessive pronoun is obtained by संधिing together
+the possessor's संबंध कारक and the <em>effective pronoun</em> of the possessee.</p>
+<table>
+<tr><th>possessee</th><th>effective pronoun</th></tr>
+<tr><td>singular neuter</td><td>అది</td></tr>
+<tr><td>plural neuter</td><td>అవి</td></tr>
+<tr><td>singular male</td><td>వాడు</td></tr>
+<tr><td>singular female</td><td>అది</td></tr>
+<tr><td>plural people</td><td>వాళ్లు</td></tr>
+</table>
+
+<p>Examples:</p>
+<ul>
+<li>Singular neuter:
+    This book is <strong>Ravi's</strong>.
+    = यह पुस्तक <strong>रवि की</strong> है।
+    = ఈ పుస్తకం <strong>రవిది</strong>. (రవిది = రవి + అది)</li>
+<li>Plural neuter:
+    These books are <strong>yours</strong>.
+    = ये पुस्तकें <strong>तुम्हारी</strong> हैं।
+    = ఈ పుస్తకాలు <strong>నీవి</strong>. (నీవి = నీ + అవి)</li>
+<li>Singular male:
+    He is <strong>hers</strong>.
+    = वह <strong>उसका</strong> है।
+    = అతను <strong>ఆమెవాడు</strong>.</li>
+<li>Plural people:
+    They are <strong>mine</strong>.
+    = ये <strong>मेरे</strong> हैं।
+    = వీళ్లు <strong>నావాళ్లు</strong>.</li>
+</ul>
+<p>X कारक of the possessive pronoun is the संधि of the possessor's संबंध कारक
+and the possessee's effective pronoun's X कारक.</p>
+<p>Example of applying अधिकरण कारक to possessive pronouns:</p>
+<ul>
+<li>Question: Whose car is he in? = वह किसकी car में है? = అతను ఎవరి carలో ఉన్నాడు?</li>
+<li>Answer: He is <strong>in mine</strong>.
+    = वह <strong>मेरी में</strong> है।
+    = అతను <strong>నాదానిలో</strong> ఉన్నాడు.</li>
+</ul>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
