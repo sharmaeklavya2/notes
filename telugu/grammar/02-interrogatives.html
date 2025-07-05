@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+thead th, .sticky th {position: sticky; top: 0; background-color: var(--bg-color);}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Interrogatives</h1>
+<p>[source: <a href="https://archive.org/details/dli.language.2300">https://archive.org/details/dli.language.2300</a>]</p>
+<p>Interrogatives and their corresponding answer words:</p>
+<table>
+<tr><th>తెలుగు</th><th>हिंदी</th><th>english</th></tr>
+<tr><td>ఎవరు</td><td>कौन</td><td>who</td></tr>
+<tr><td>ఏమిటి</td><td>क्या</td><td>what</td></tr>
+<tr><td>ఏది</td><td>कौनसा</td><td>which</td></tr>
+<tr><td>ఇది</td><td>यह</td><td>this</td></tr>
+<tr><td>అది</td><td>वह</td><td>that</td></tr>
+<tr><td>ఏవి</td><td>कौनसे</td><td>which (plural)</td></tr>
+<tr><td>ఇవి</td><td>ये</td><td>these</td></tr>
+<tr><td>అవి</td><td>वे</td><td>those</td></tr>
+<tr><td>ఎక్కడ</td><td>कहाँ</td><td>where</td></tr>
+<tr><td>ఇక్కడ</td><td>यहाँ</td><td>here</td></tr>
+<tr><td>అక్కడ</td><td>वहाँ</td><td>there</td></tr>
+<tr><td>ఎప్పడు</td><td>कब</td><td>when</td></tr>
+<tr><td>ఇప్పుడు</td><td>अब</td><td>now</td></tr>
+<tr><td>అప్పుడు</td><td>तब</td><td>then</td></tr>
+<tr><td>ఎలా</td><td>कैसे</td><td>how</td></tr>
+<tr><td>ఇలా</td><td>ऐसे</td><td>like this</td></tr>
+<tr><td>అలా</td><td>वैसे</td><td>like that</td></tr>
+<tr><td>ఎందుకు</td><td>क्यों</td><td>why</td></tr>
+<tr><td>ఇందుకు</td><td>इस लिये</td><td>for this reason</td></tr>
+<tr><td>అందుకు</td><td>उस लिये</td><td>for that reason</td></tr>
+<tr><td>ఎంత</td><td>कितना</td><td>how much</td></tr>
+<tr><td>ఇంత</td><td>इतना</td><td>this much</td></tr>
+<tr><td>అంత</td><td>उतना</td><td>that much</td></tr>
+<tr><td>ఎన్ని</td><td>कितने</td><td>how many</td></tr>
+<tr><td>ఇన్ని</td><td>इतने</td><td>this many</td></tr>
+<tr><td>అన్ని</td><td>उतने</td><td>that many</td></tr>
+<tr><td>ఎటు</td><td>किस ओर</td><td>in which direction</td></tr>
+<tr><td>ఇటు</td><td>इस ओर</td><td>in this direction</td></tr>
+<tr><td>అటు</td><td>उस ओर</td><td>in that direction</td></tr>
+<tr><td>దేని</td><td>किसका</td><td>whose (neuter)</td></tr>
+</table>
+
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
