@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+thead th, .sticky th {position: sticky; top: 0; background-color: var(--bg-color);}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1>Telugu vs Hindi</h1>
+<p>Here I document words that have different meanings in Hindi and Telugu.</p>
+<p>(Click the ट्र icon on the bottom right to transliterate Telugu if you can't read the Telugu script.)</p>
+<table>
+<tr><th>word</th><th>meaning</th></tr>
+<tr><td>ఆలస్యం</td><td>देर</td></tr>
+<tr><td>చరిత్ర</td><td>इतिहास / history</td></tr>
+<tr><td>సంగతి</td><td>news</td></tr>
+<tr><td>ధైర్యం</td><td>साहस</td></tr>
+<tr><td>నిర్లక్ష్యం</td><td>negligence</td></tr>
+<tr><td>గుండె</td><td>दिल / heart</td></tr>
+<tr><td>రండి</td><td>आइए</td></tr>
+<tr><td>ఆట</td><td>खेल</td></tr>
+<tr><td>గాలి</td><td>हवा</td></tr>
+<tr><td>గీత</td><td>line</td></tr>
+<tr><td>బల్ల</td><td>table</td></tr>
+<tr><td>గుడ్డ</td><td>कपड़ा</td></tr>
+<tr><td>ఖరీదు</td><td>दाम / price</td></tr>
+<tr><td>చాలు</td><td>काफ़ी / enough</td></tr>
+</table>
+
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
