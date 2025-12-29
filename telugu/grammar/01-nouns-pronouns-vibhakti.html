@@ -10,12 +10,14 @@ body {
     --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
     --link-color: #1a0dab; --vlink-color: #681da8;
     --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+    --light-tint: rgba(0, 0, 0, 0.05);
 }
 @media (prefers-color-scheme: dark) {
     body {
         --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
         --link-color: #8ab4f8; --vlink-color: #c58af9;
         --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+        --light-tint: rgba(255, 255, 255, 0.05);
     }
     img {filter: brightness(.8) contrast(1.2);}
 }
@@ -37,6 +39,22 @@ a:visited {color: var(--vlink-color);}
 table {border-collapse: collapse;}
 td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
 thead th, .sticky th {position: sticky; top: 0; background-color: var(--bg-color);}
+
+/* toc */
+.toc {
+    background-color: var(--light-tint);
+    padding: 1em;
+}
+.toctitle {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+.toc ul {
+    margin: 0;
+    padding-left: 1.1em;
+}
 
 /* extra */
 h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
@@ -63,7 +81,7 @@ body h2::before, body h3::before {
 </style>
 </head>
 <body>
-<h1>Nouns, pronouns, and case (कारक / విభక్తి)</h1>
+<h1 id="nouns-pronouns-and-case">Nouns, pronouns, and case (कारक / విభక్తి)</h1>
 <p>[source: <a href="https://archive.org/details/dli.language.2300">https://archive.org/details/dli.language.2300</a>]</p>
 <p>We will look at different kinds of pronouns,
 and how to apply case / कारक / విభక్తి to nouns and pronouns.
@@ -92,7 +110,7 @@ is useful.</p>
 </table>
 </p>
 
-<h2>General process</h2>
+<h2 id="general-process">General process</h2>
 <p>We describe the general process for applying कारक in Telugu.
 This process works for most nouns (called regular nouns)
 but some exceptions exist (called irregular nouns).</p>
@@ -147,7 +165,7 @@ but some exceptions exist (called irregular nouns).</p>
 </tr>
 </table>
 
-<h2>Irregular Nouns</h2>
+<h2 id="irregular-nouns">Irregular Nouns</h2>
 <p>Nouns that are irregular because of their संबंध कारक:</p>
 <table>
 <tr><th>తెలుగు</th><th>संबंध कारक</th><th>हिंदी</th><th>english</th></tr>
@@ -200,7 +218,7 @@ but some exceptions exist (called irregular nouns).</p>
 </tr>
 </table>
 
-<h2>Personal Pronouns</h2>
+<h2 id="personal-pronouns">Personal Pronouns</h2>
 <p>We use different personal pronouns in Telugu depending on person (first, second, third), number (singular, plural), respect (informal, respectful), gender (male, female, neuter), and distance (near, far).</p>
 <p>Only third person pronouns have gender associated with them.
 Verb conjugations and విభక్తి do not depend on distance.
@@ -344,12 +362,12 @@ Telugu has two 'we's: see <a href="https://en.wikipedia.org/wiki/Clusivity">wiki
 </tbody>
 </table>
 
-<h2>Reflexive pronouns</h2>
+<h2 id="reflexive-pronouns">Reflexive pronouns</h2>
 <p>Telugu doesn't have reflexive pronouns.</p>
 <p>Example: I looked at <strong>myself</strong>.
     = मैंने <strong>खुदको</strong> देखा।
     = నేను నన్ను చూసుకున్నాను.</p>
-<h2>Demonstrative Pronouns and Adjectives</h2>
+<h2 id="demonstrative-pronouns-and-adjectives">Demonstrative Pronouns and Adjectives</h2>
 <p>The demonstrative adjectives are ఈ for near and ఆ for far.</p>
 <p>Example:
     <strong>This</strong> book is mine.
@@ -360,7 +378,7 @@ Telugu has two 'we's: see <a href="https://en.wikipedia.org/wiki/Clusivity">wiki
     <strong>This</strong> is my book.
     = <strong>यह</strong> मेरी पुस्तक है।
     = <strong>ఇది</strong> నా పుస్తకం.</p>
-<h2>Possessive Pronouns and Adjectives</h2>
+<h2 id="possessive-pronouns-and-adjectives">Possessive Pronouns and Adjectives</h2>
 <p>Possessive adjectives are the same as the संबंध कारक.</p>
 <p>Example:
     This is <strong>my</strong> book.
@@ -405,7 +423,7 @@ and the possessee's effective pronoun's X कारक.</p>
     = वह <strong>मेरी में</strong> है।
     = అతను <strong>నాదానిలో</strong> ఉన్నాడు.</li>
 </ul>
-<h2>Noun Plurals</h2>
+<h2 id="noun-plurals">Noun Plurals</h2>
 <p>Generally, we pluralize a noun by adding లు.
 E.g., అబ్బాయి (लड़का) → అబ్బాయిలు (लड़के).</p>
 <p>Exceptions:</p>

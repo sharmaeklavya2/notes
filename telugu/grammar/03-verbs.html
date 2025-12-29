@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<style>
+/* color scheme */
+body {
+    --bg-color: white; --text-color: #202020; --text-secondary: #888; --emph-color: #101010;
+    --link-color: #1a0dab; --vlink-color: #681da8;
+    --text-danger: #dc3545; --text-warning: #ffc107; --text-success: #198754;
+    --light-tint: rgba(0, 0, 0, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #1b1e20; --text-color: #c8c8c8; --emph-color: #e4e4e4;
+        --link-color: #8ab4f8; --vlink-color: #c58af9;
+        --text-danger: #e74c3c; --text-warning: #f39c12; --text-success: #00bc8c;
+        --light-tint: rgba(255, 255, 255, 0.05);
+    }
+    img {filter: brightness(.8) contrast(1.2);}
+}
+
+/* basic */
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+    margin: 0; padding: 0 2.5em; line-height: 1.5; font-size: 1.1em;
+    color: var(--text-color); background-color: var(--bg-color);
+}
+a:not(:hover) {text-decoration: none;}
+a {color: var(--link-color);}
+a:visited {color: var(--vlink-color);}
+@media (max-width: 820px) {
+    body {padding: 0 1em;}
+    ul {padding-left: 1em;}
+    ol {padding-left: 1.2em;}
+}
+table {border-collapse: collapse;}
+td, th {border: 1px solid var(--text-secondary); padding: 0.1rem 0.5rem;}
+thead th, .sticky th {position: sticky; top: 0; background-color: var(--bg-color);}
+
+/* toc */
+.toc {
+    background-color: var(--light-tint);
+    padding: 1em;
+}
+.toctitle {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+.toc ul {
+    margin: 0;
+    padding-left: 1.1em;
+}
+
+/* extra */
+h1, h2, h3, h4, h5, h6 {line-height: initial; color: var(--emph-color);}
+strong, em {color: var(--emph-color);}
+.danger {color: var(--text-danger);}
+.warning {color: var(--text-warning);}
+.success {color: var(--text-success);}
+
+/* numbered headings */
+body {counter-reset: section;}
+body h2 {counter-reset: subsection;}
+body h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+body h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) ". ";
+}
+body h2::before, body h3::before {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+<h1 id="verbs">Verbs</h1>
+<p>In this article, we will look at the different forms that verbs can have in Telugu.</p>
+<p>I have created a <a href="https://docs.google.com/spreadsheets/d/1N4qPA8Ku3jhVjY6ksTkHUy4Z8-P1rJFDBn3B8HUHCgM/edit?usp=sharing">Google sheet</a> that contains many examples for
+a large number of verb forms.
+Some entries in the sheet don't follow the transformation rules described here.
+Those entries are highlighted in red or yellow,
+depending on how different they are from the transformation rule.</p>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#what-to-memorize">What to Memorize</a></li>
+<li><a href="#sandhi">Sandhi</a></li>
+<li><a href="#imperative">Imperative</a></li>
+<li><a href="#infinitive">Infinitive</a></li>
+<li><a href="#tenses">Tenses</a><ul>
+<li><a href="#simple-present-tense">Simple Present Tense</a></li>
+<li><a href="#negative-simple-present-tense">Negative Simple Present Tense</a></li>
+<li><a href="#simple-past-tense">Simple Past Tense</a></li>
+<li><a href="#negative-simple-past-tense">Negative Simple Past Tense</a></li>
+<li><a href="#simple-future-tense">Simple Future Tense</a></li>
+<li><a href="#negative-simple-future-tense">Negative Simple Future Tense</a></li>
+<li><a href="#present-continuous-tense">Present Continuous Tense</a></li>
+<li><a href="#negative-present-continuous-tense">Negative Present Continuous Tense</a></li>
+</ul>
+</li>
+<li><a href="#participles">Participles</a><ul>
+<li><a href="#present-adverbial-participle">Present Adverbial Participle</a></li>
+<li><a href="#past-adverbial-participle">Past Adverbial Participle</a></li>
+<li><a href="#negative-adverbial-participle">Negative Adverbial Participle</a></li>
+<li><a href="#present-adjectival-participle">Present Adjectival Participle</a></li>
+<li><a href="#past-adjectival-participle">Past Adjectival Participle</a></li>
+<li><a href="#futurehabitual-adjectival-participle">Future/Habitual Adjectival Participle</a></li>
+<li><a href="#negative-adjectival-participle">Negative Adjectival Participle</a></li>
+</ul>
+</li>
+<li><a href="#comparative-adverb-forms">Comparative Adverb Forms</a><ul>
+<li><a href="#manner-adverb-form">Manner Adverb Form</a></li>
+<li><a href="#temporal-adverb-form">Temporal Adverb Form</a></li>
+<li><a href="#quantitative-adverb-form">Quantitative Adverb Form</a></li>
+</ul>
+</li>
+<li><a href="#other-forms">Other Forms</a><ul>
+<li><a href="#gerund">Gerund</a></li>
+<li><a href="#conditional">Conditional</a></li>
+<li><a href="#obligatory">Obligatory</a></li>
+<li><a href="#hortative">Hortative</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="sources">Sources</h2>
+<p>My primary source of Telugu grammar is the book
+<a href="https://archive.org/details/dli.language.2300">An Intensive Course in Telugu</a>
+by Parimi Ramanarsimham.
+The book has multiple chapters, each of which usually starts with
+a dialogue in Telugu between people,
+followed by exercises, vocabulary, and grammar notes related to the dialogue.
+The grammar notes are fragmented across chapters, making it hard to refer to a particular topic.
+This article, on the other hand, is a structured reference of verb forms.</p>
+<p>My second source of Telugu grammar is my wife, who is a native Telugu speaker from Telangana.
+She said that Telangana uses a slightly different dialect of spoken Telugu
+compared to the above book. In this article, I have tried documenting these differences
+with regards to verb forms.</p>
+<h2 id="what-to-memorize">What to Memorize</h2>
+<p>If you're learning Telugu, memorizing the following forms is crucial:</p>
+<ol>
+<li>The <a href="#imperative">imperative</a> form (the primary/defining form).</li>
+<li>The <a href="#infinitive">infinitive</a> form.</li>
+<li>The <a href="#present-adverbial-participle">present adverbial participle</a>.</li>
+<li>The <a href="#past-adverbial-participle">past adverbial participle</a>.</li>
+</ol>
+<p>This is because these four forms can be used to derive almost all of the other forms.
+Additionally, it's useful to memorize the <a href="#past-adjectival-participle">past adjectival participle</a>.</p>
+<h2 id="sandhi">Sandhi</h2>
+<p>We will learn how to transform a verb from one form to other forms.
+To do these transformations, we will often need to join two words together.
+This process of joining words is called సంధి (संधि / sandhi).
+There are many different sandhi rules in Telugu, but for this article,
+the rules given by the following table will suffice.
+The rules depend on the kind of vowel the first word ends with
+and the kind of character the second word starts with.
+(Note that అ = अ is considered a vowel, so, e.g.,
+మన ends with a vowel, but రాకేష్ and పుస్తకం don't.)</p>
+<table>
+<tr>
+    <th>1st ends with</th>
+    <th>2nd starts with</th>
+    <th>action</th>
+    <th>examples</th>
+</tr>
+<tr>
+    <td>short vowel</td>
+    <td>short vowel</td>
+    <td>remove 1st word's vowel and concatenate</td>
+    <td>వెళ్ళు + అకు = వెళ్ళకు, ఎక్కడ + ఉన్నావు = ఎక్కడున్నావు</td>
+</tr>
+<tr>
+    <td>long vowel</td>
+    <td>short vowel</td>
+    <td>remove 2nd word's vowel and concatenate</td>
+    <td>కూర్చో + అకు = కూర్చోకు</td>
+</tr>
+<tr>
+    <td>long vowel</td>
+    <td>long vowel</td>
+    <td>remove 1st word's vowel and concatenate</td>
+    <td>తింటూ + ఆను = తింటాను</td>
+</tr>
+<tr>
+    <td>vowel</td>
+    <td>consonant</td>
+    <td>concatenate</td>
+    <td>పో + వాలి = పోవాలి</td>
+</tr>
+</table>
+
+<h2 id="imperative">Imperative</h2>
+<p>The <strong>imperative form</strong> denotes a request, order, or suggestion.
+Here are some example sentences, with the verbs in bold: </p>
+<ul>
+<li>నీళ్లు <strong>తాగు</strong>. = <strong>Drink</strong> water. = पानी <strong>पियो</strong>।</li>
+<li>ఇది <strong>తీసుకో</strong>. = <strong>Take</strong> this. = यह <strong>लो</strong>।</li>
+<li><strong>పో</strong>! = <strong>Go</strong>! = <strong>जाओ</strong>!</li>
+</ul>
+<p>Moreover, there are sub-types of the imperative form:</p>
+<ul>
+<li>Simple imperative: తిను = eat = खाओ.</li>
+<li>Polite imperative: తినండి = (please) eat = खाइए.</li>
+<li>Negative imperative: తినకు = don't eat = मत खाओ.</li>
+<li>Polite negative imperative: తినకండి = (please) don't eat = मत खाइए.</li>
+</ul>
+<p><strong>Transformation Rule</strong>:
+Take the <a href="#infinitive">infinitive form</a> of the verb and append (with <a href="#sandhi">sandhi</a>):</p>
+<ol>
+<li>'అకు' to get the negative imperative form.
+    E.g., వెళ్ళు → వెళ్ళకు, కూర్చో → కూర్చోకు, అడుగు → అడగకు.</li>
+<li>'అండి' to get the polite imperative form.
+    E.g., వెళ్ళు → వెళ్ళండి, కూర్చో → కూర్చోండి, అడుగు → అడగండి.</li>
+<li>'ఆకండి' to get the polite negative imperative form.
+    E.g., వెళ్ళు → వెళ్ళకండి, కూర్చో → కూర్చోకండి, అడుగు → అడగకండి.</li>
+</ol>
+<p>See the <a href="https://docs.google.com/spreadsheets/d/1N4qPA8Ku3jhVjY6ksTkHUy4Z8-P1rJFDBn3B8HUHCgM/edit?usp=sharing">Google sheet</a> for more examples.</p>
+<h2 id="infinitive">Infinitive</h2>
+<p>The infinitive form has many functions.</p>
+<ul>
+<li><strong>Past negative form</strong>: obtained by adding 'లేదు' to the infinitive. Examples:<ul>
+<li>నేను వెళ్ళలేదు. = I did not go. = मैं नहीं गया।</li>
+<li>ఆమె రాలేదు. = She did not come. = वह नहीं आई।</li>
+</ul>
+</li>
+<li><strong>Permissive form</strong>: obtained by adding 'వచ్చు' to the infinitive. Examples:<ul>
+<li>నువ్వు నీళ్ళు తాగవచ్చు. = You may drink water. = तुम पानी पी सकते हो।</li>
+<li>నేను లోపలికి రావచ్చా? = May I come in? = मैं अंदर आ सकता हूँ क्या?</li>
+</ul>
+</li>
+<li><strong>Prohibitive form</strong>: obtained by adding 'కూడదు' to the infinitive. Examples:<ul>
+<li>నువ్వు నీళ్ళు తాగకూడదు. = You may not drink water. = तुम पानी नहीं पी सकते।</li>
+<li>రవి లోపలికి రాకూడదు. = Ravi cannot come inside. = रवि अंदर नहीं आ सकता।</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transformation Rule</strong>:
+Usually, the infinitive form is obtained by appending
+ఆ to the imperative form (with <a href="#sandhi">sandhi</a>).
+Examples: వెళ్ళు → వెళ్ళ, కూర్చో → కూర్చో.</p>
+<p>There are many exceptions to this rule.
+Most exceptions come from <em>Trisyllabic</em> verbs.
+These are verbs whose imperative form consists of three syllables.
+For them, before appending ఆ to the imperative form,
+the middle syllable's vowel is changed to అ.
+Examples: అడుగు → అడగ, వెతుకు → వెతక.</p>
+<h2 id="tenses">Tenses</h2>
+<p>Verbs take on different forms based on who is doing the action and when the action happens.
+For example, here are the different forms of తిను (= eat = खाओ).</p>
+<ul>
+<li>నేను నారింజ <em>తింటున్నాను</em>. = I <em>am eating</em> an orange. = मैं संतरा <em>खा रहा हूँ</em>।</li>
+<li>మేం రోజూ నారింజలు <em>తింటాం</em>. = We <em>eat</em> oranges everyday. = हम रोज़ संतरे <em>खाते हैं</em>।</li>
+<li>నేను నారింజ <em>తిన్నాను</em>. = I <em>ate</em> an orange. = मैंने संतरा <em>खाया</em>।</li>
+</ul>
+<p>Modifying a verb based on context is called <em>verb conjugation</em>.
+In Telugu, verbs are conjugated based on:</p>
+<ol>
+<li><strong>Tense</strong>: the time when an event happens.</li>
+<li><strong>Subject</strong>: The pronoun of the subject, i.e., the person/object doing the action.</li>
+<li>Whether the action is <strong>positive</strong> or <strong>negative</strong>.</li>
+</ol>
+<p>Conjugating a verb usually involves picking an appropriate form of a verb based on tense
+and positivity/negativity, and then appending an appropriate <em>personal suffix</em>
+based on the subject's pronoun.
+So, we will frequently refer to the following table of personal suffixes:</p>
+<table id="png-suffix-table">
+<tr>
+    <th>Subject's <a href="01-nouns-pronouns-vibhakti.html#personal-pronouns">pronoun</a></th>
+    <th>positive personal suffix</th>
+    <th>negative personal suffix</th>
+</tr>
+<tr>
+    <td>నేను (I)</td>
+    <td>ఆను</td>
+    <td>ను</td>
+</tr>
+<tr>
+    <td>నువ్వు (You)</td>
+    <td>ఆవు</td>
+    <td>వు</td>
+</tr>
+<tr>
+    <td>మేం/మనం (We)</td>
+    <td>ఆం</td>
+    <td>ం</td>
+</tr>
+<tr>
+    <td>మీరు/వారు/వాళ్ళు (You/They)</td>
+    <td>ఆరు</td>
+    <td>రు</td>
+</tr>
+<tr>
+    <td>అతను/వాడు (He)</td>
+    <td>ఆడు</td>
+    <td>డు</td>
+</tr>
+<tr>
+    <td>ఆమె/అది (She/It)</td>
+    <td>అది</td>
+    <td>ది</td>
+</tr>
+<tr>
+    <td>అవి (They)</td>
+    <td>ఆయి</td>
+    <td>వు</td>
+</tr>
+</table>
+
+<p>ఉండు (= be = हो) is called the existential verb.</p>
+<h3 id="simple-present-tense">Simple Present Tense</h3>
+<h4 id="existential-verb">Existential Verb</h4>
+<p>ఉండు is conjugated in the simple present tense by appending
+the <a href="#png-suffix-table">positive personal suffix</a> to ఉన్న. Examples:</p>
+<ul>
+<li>నేను ఇంట్లో <em>ఉన్నాను</em>. = I <em>am</em> at home. = मैं घर पर <em>हूँ</em>।</li>
+<li>నువ్వు ఇంట్లో <em>ఉన్నావు</em>. = You <em>are</em> at home. = तुम घर पर <em>हो</em>।</li>
+<li>మేం ఇంట్లో <em>ఉన్నాం</em>. = We <em>are</em> at home. = हम घर पर <em>हैं</em>।</li>
+</ul>
+<p>By the above rule, the conjugation for ఆమె and అది should be ఉన్నది.
+Although ఉన్నది is correct, ఉంది is more common.</p>
+<ul>
+<li>ఆమె ఇంట్లో <em>ఉంది</em>. = She <em>is</em> at home. = वह घर पर <em>है</em>।</li>
+</ul>
+<h4 id="other-verbs">Other Verbs</h4>
+<p>For verbs other than ఉండు, the simple present tense is usually used to describe habits.
+Thus, it is also called the <em>present habitual tense</em>.
+E.g., నేను coffee తాగుతాను. = I drink coffee. = मैं coffee पीता हूँ।</p>
+<p>Verbs other than ఉండు are conjugated in the simple present tense
+by appending the <a href="#png-suffix-table">positive personal suffix</a> to
+the <a href="#present-adverbial-participle">present adverbial participle</a>
+when the subject is not ఆమె/అది. Examples:</p>
+<ul>
+<li>నేను తింటాను. = I eat. = मैं खाता हूँ।</li>
+<li>మేం నవ్వుతాం. = We laugh. = हम हँसते हैं।</li>
+</ul>
+<p>When the subject is ఆమె/అది, in the Telangana dialect, the ఊ at the end of
+<a href="#present-adverbial-participle">present adverbial participle</a> is replaced by
+అది in the Telangana dialect and ఉంది elsewhere. Examples:</p>
+<ul>
+<li>(Telangana) అది తింటది. = (Non-Telangana) అది తింటుంది. = It eats. = वह खाता है।</li>
+<li>(Telangana) ఆమె నవ్వుతది. = (Non-Telangana) ఆమె నవ్వుతుంది. = She laughs. = वह हँसती है।</li>
+</ul>
+<p>In spoken Telugu, when the subject is నేను, sometimes the final ను is dropped. E.g.,</p>
+<ul>
+<li>నేను తింటా. = I eat. = मैं खाता हूँ।</li>
+</ul>
+<h3 id="negative-simple-present-tense">Negative Simple Present Tense</h3>
+<h4 id="existential-verb_1">Existential Verb</h4>
+<p>ఉండు is conjugated in the negative simple present tense by appending the
+<a href="#png-suffix-table">negative personal suffix</a> to లే.
+Examples:</p>
+<ul>
+<li>నేను ఇంట్లో <em>లేను</em>. = I <em>am not</em> at home. = मैं घर पर <em>नहीं हूँ</em>।</li>
+<li>నువ్వు ఇంట్లో <em>లేవు</em>. = You <em>are not</em> at home. = तुम घर पर <em>नहीं हो</em>।</li>
+<li>మేం ఇంట్లో <em>లేం</em>. = We <em>are not</em> at home. = हम घर पर <em>नहीं हैं</em>।</li>
+<li>ఆమె ఇంట్లో <em>లేదు</em>. = She <em>is not</em> at home. = वह घर पर <em>नहीं है</em>।</li>
+</ul>
+<h4 id="other-verbs_1">Other Verbs</h4>
+<p>Verbs other than ఉండు are conjugated in the negative simple present tense by appending the
+<a href="#png-suffix-table">negative personal suffix</a> to the verb's <a href="#infinitive">infinitive</a>.
+Examples:</p>
+<ul>
+<li>నేను coffee తాగను. = I don't drink coffee. = मैं coffee नहीं पीता।</li>
+<li>మేం కూర్చోం. = We don't sit. = हम नहीं बैठते।</li>
+</ul>
+<h3 id="simple-past-tense">Simple Past Tense</h3>
+<h4 id="existential-verb_2">Existential Verb</h4>
+<p>ఉండు is conjugated differently depending on dialect and context.</p>
+<p>Method 1: conjugate to ఉండే.</p>
+<ul>
+<li>నేను ఇంట్లో <em>ఉండే</em>. = I <em>was</em> at home. = मैं घर पर <em>था</em>।</li>
+<li>మేం ఇంట్లో <em>ఉండే</em>. = We <em>were</em> at home. = हम घर पर <em>थे</em>।</li>
+<li>ఆమె ఇంట్లో <em>ఉండే</em>. = She <em>was</em> at home. = वह घर पर <em>थी</em>।</li>
+</ul>
+<p>Method 2: same as simple present.</p>
+<ul>
+<li>నేను ఇంట్లో <em>ఉన్నాను</em>. = I <em>was</em> at home. = मैं घर पर <em>था</em>।</li>
+<li>మేం ఇంట్లో <em>ఉన్నాం</em>. = We <em>were</em> at home. = हम घर पर <em>थे</em>।</li>
+<li>ఆమె ఇంట్లో <em>ఉంది</em>. = She <em>was</em> at home. = वह घर पर <em>थी</em>।</li>
+</ul>
+<p>With method 2, disambiguation between present and past tense is often done by
+using the words ఇప్పుడు (= now = अब/अभी) and అప్పుడు (= then = तब).</p>
+<ul>
+<li>నేను <em>ఇప్పుడు</em> ఇంట్లో <em>ఉన్నాను</em>. = I <em>am</em> at home <em>now</em>. = मैं <em>अभी</em> घर पर <em>हूँ</em>।</li>
+<li>నేను <em>అప్పుడు</em> ఇంట్లో <em>ఉన్నాను</em>. = I <em>was</em> at home <em>then</em>. = मैं <em>तब</em> घर पर <em>था</em>।</li>
+</ul>
+<h4 id="other-verbs_2">Other Verbs</h4>
+<p>There are two ways to conjugate the simple past tense.
+Method 1 is understood everywhere.
+Sometimes method 2 is used in spoken Telangana Telugu.</p>
+<p><strong>Method 1</strong>:</p>
+<p>Simple past tense conjugation rule for verbs other than ఉండు
+(actually this works for ఉండు too, depending on dialect and context):</p>
+<ol>
+<li>If the <a href="#past-adjectival-participle">past adjectival participle</a> ends with న్న,
+    add the <a href="#png-suffix-table">positive personal suffix</a> to it. Examples:<ul>
+<li>నేను తిన్నాను. = I ate. = मैंने खाया।</li>
+<li>ఆమె కూర్చున్నది. = She sat. = वह बैठी।</li>
+</ul>
+</li>
+<li>Else, if the subject is ఆమె/అది, append ఇంది to the
+    <a href="#past-adverbial-participle">past adverbial participle</a>. Example:<ul>
+<li>ఆమె వచ్చింది. = She came. = वह आई।</li>
+</ul>
+</li>
+<li>Else, append the <a href="#png-suffix-table">positive personal suffix</a> to the
+    <a href="#past-adverbial-participle">past adverbial participle</a>. Example:<ul>
+<li>నేను వచ్చాను. = I came. = मैं आया।</li>
+</ul>
+</li>
+</ol>
+<p>In case 3 above, the ఆ in the positive personal suffix
+is pronounced differently: like the 'a' in 'man' or 'cat'.</p>
+<p><strong>Method 2</strong>:</p>
+<p>This method only applies to subjects other than ఆమె/అది, and only when the
+<a href="#past-adjectival-participle">past adjectival participle</a> does not end with న్న.</p>
+<ol>
+<li>If the subject is నేను, then the conjugation is the same as the
+    <a href="#past-adjectival-participle">past adjectival participle</a>. Example:<ul>
+<li>నేను దూకిన. = I jumped. = मैं कूदा।</li>
+</ul>
+</li>
+<li>Otherwise, replace the ఆ in the <a href="#png-suffix-table">positive personal suffix</a> to అ,
+    append this suffix to the <a href="#past-adjectival-participle">past adjectival participle</a>.
+    Examples:<ul>
+<li>మేం దూకినం. = We jumped. = हम कूदे।</li>
+<li>అతను దూకినడు. = He jumped. = वह कूदा।</li>
+<li>అవి దూకినయి. = They jumped. = वे कूदे।</li>
+</ul>
+</li>
+</ol>
+<h3 id="negative-simple-past-tense">Negative Simple Past Tense</h3>
+<h4 id="existential-verb_3">Existential Verb</h4>
+<p>ఉండు is conjugated differently depending on dialect and context.</p>
+<p>Method 1: conjugate to లేకుండే or లేకపోయింది.</p>
+<ul>
+<li>నేను ఇంట్లో <em>లేకుండే</em>. = I <em>was not</em> at home. = मैं घर पर <em>नहीं था</em>।</li>
+<li>మేం ఇంట్లో <em>లేకుండే</em>. = We <em>were not</em> at home. = हम घर पर <em>नहीं थे</em>।</li>
+<li>ఆమె ఇంట్లో <em>లేకుండే</em>. = She <em>was not</em> at home. = वह घर पर <em>नहीं थी</em>।</li>
+</ul>
+<p>Method 2: same as negative simple present.</p>
+<ul>
+<li>నేను ఇంట్లో <em>లేను</em>. = I <em>was not</em> at home. = मैं घर पर <em>नहीं था</em>।</li>
+<li>మేం ఇంట్లో <em>లేం</em>. = We <em>were not</em> at home. = हम घर पर <em>नहीं थे</em>।</li>
+<li>ఆమె ఇంట్లో <em>లేదు</em>. = She <em>was not</em> at home. = वह घर पर <em>नहीं थी</em>।</li>
+</ul>
+<p>With method 2, disambiguation between present and past tense is often done by
+using the words ఇప్పుడు (= now = अब/अभी) and అప్పుడు (= then = तब).</p>
+<ul>
+<li>నేను <em>ఇప్పుడు</em> ఇంట్లో <em>లేను</em>. = I <em>am not</em> at home <em>now</em>. = मैं <em>अभी</em> घर पर <em>नहीं हूँ</em>।</li>
+<li>నేను <em>అప్పుడు</em> ఇంట్లో <em>లేను</em>. = I <em>was not</em> at home <em>then</em>. = मैं <em>तब</em> घर पर <em>नहीं था</em>।</li>
+</ul>
+<h4 id="other-verbs_3">Other Verbs</h4>
+<p>Verbs other than ఉండు are conjugated in the negative simple past tense by appending the
+లేదు to the verb's <a href="#infinitive">infinitive</a>. Examples:</p>
+<ul>
+<li>నేను coffee తాగలేదు. = I didn't drink coffee. = मैंने coffee नहीं पी।</li>
+<li>మేం కూర్చోలేదు. = We didn't sit. = हम नहीं बैठे।</li>
+</ul>
+<h3 id="simple-future-tense">Simple Future Tense</h3>
+<h4 id="existential-verb_4">Existential Verb</h4>
+<p>ఉండు is conjugated in the simple future tense similar to how
+other verbs are conjugated in the simple present tense.</p>
+<p>ఉండు is conjugated in the simple future tense by
+appending the <a href="#png-suffix-table">positive personal suffix</a> to
+ఉంటూ (the <a href="#present-adverbial-participle">present adverbial participle</a> of ఉండు)
+when the subject is not ఆమె/అది. Examples:</p>
+<ul>
+<li>నేను రేపు ఇంట్లో <em>ఉంటాను</em>. = I <em>will be</em> at home tomorrow. = मैं कल घर पर <em>होऊँगा</em>।</li>
+<li>మేం రేపు ఇంట్లో <em>ఉంటాం</em>. = We <em>will be</em> at home tomorrow. = हम कल घर पर <em>होंगे</em>।</li>
+</ul>
+<p>When the subject is ఆమె/అది, in the Telangana dialect, the ఊ at the end of
+ఉంటూ is replaced by అది in the Telangana dialect and ఉంది elsewhere. Example:</p>
+<ul>
+<li>(Telangana) ఆమె రేపు ఇంట్లో <em>ఉంటది</em>.
+    = (Non-Telangana) ఆమె రేపు ఇంట్లో <em>ఉంటుంది</em>.
+    = She <em>will be</em> at home tomorrow. = वह कल घर पर <em>होगी</em>।</li>
+</ul>
+<h4 id="other-verbs_4">Other Verbs</h4>
+<p>Verbs other than ఉండు are conjugated in the simple future tense in exactly the same way
+as they are conjugated in the <a href="#simple-present-tense">simple present tense</a>.
+Disambiguation between these two tenses is done by providing additional context.</p>
+<h3 id="negative-simple-future-tense">Negative Simple Future Tense</h3>
+<p>Conjugation rule: append the <a href="#png-suffix-table">negative personal suffix</a>
+to the verb's <a href="#infinitive">infinitive</a>. Examples:</p>
+<ul>
+<li>నేను coffee తాగను. = I won't drink coffee. = मैं coffee नहीं पियूँगा।</li>
+<li>మేం కూర్చోం. = We won't sit. = हम नहीं बैठेंगे।</li>
+</ul>
+<p>For verbs other than ఉండు, the negative simple future tense is
+identical to the <a href="#negative-simple-present-tense">negative simple present tense</a>.
+Hence, additional context is often used to disambiguate between them.</p>
+<h3 id="present-continuous-tense">Present Continuous Tense</h3>
+<p>If the subject is not ఆమె/అది, append the <a href="#png-suffix-table">positive personal suffix</a>
+to the <a href="#present-adjectival-participle">present adjectival participle</a>. Examples:</p>
+<ul>
+<li>నేను తింటున్నాను. = I am eating. = मैं खा रहा हूँ।</li>
+<li>మేం ఆడ్తున్నాం. = We are playing. = हम खेल रहे हैं।</li>
+</ul>
+<p>If the subject is ఆమె/అది, in the Telangana dialect, the ఊ at the end of the verb's
+<a href="#present-adverbial-participle">present adverbial participle</a> is replaced by
+ఉంది in the Telangana dialect and ఓంది elsewhere. Example:</p>
+<ul>
+<li>(Telangana) అది తింటుంది. = (Non-Telangana) అది తింటోంది. = It is eating. = वह खा रहा है।</li>
+<li>(Telangana) ఆమె నవ్వుతుంది. = (Non-Telangana) ఆమె నవ్వుతోంది. = She is laughing. = वह हँस रही है।</li>
+</ul>
+<p>In spoken Telugu, when the subject is నేను, sometimes the final ను is dropped. E.g.,</p>
+<ul>
+<li>నేను తింటున్నా. = I am eating. = मैं खा रहा हूँ।</li>
+</ul>
+<h3 id="negative-present-continuous-tense">Negative Present Continuous Tense</h3>
+<p>Conjugation rule: append లేదు to the verb's <a href="#gerund">gerund</a>. Examples:</p>
+<ul>
+<li>నేను తినటం లేదు. = I am not eating. = मैं नहीं खा रहा।</li>
+<li>ఆమె రావటం లేదు. = She is not coming. = वह नहीं आ रही।</li>
+</ul>
+<h2 id="participles">Participles</h2>
+<p>A verb's participle form is used to <em>describe</em> something.
+E.g., in the English sentence, "The children <em>who were playing</em> didn't look at us.",
+"who were playing" is a <em>participle</em> of the verb <em>play</em>,
+because "who were playing" describes "the children".</p>
+<p>Participles can be <em>adjectival</em>, i.e., those that describe nouns and pronouns,
+or they can be <em>adverbial</em>, i.e., those that describe other verbs.
+They often have a tense associated with them (present, past, future)
+and they can be positive or negative.</p>
+<h3 id="present-adverbial-participle">Present Adverbial Participle</h3>
+<p>The present adverbial participle is used to describe two actions happening simultaneously.
+Examples:</p>
+<ul>
+<li>ఆమె <em>పాడుతూ</em> వచ్చింది. = She came <em>singing</em>. = वह <em>गाते हुए</em> आई।</li>
+<li>నేను <em>తింటూ</em> పని చేస్తున్నాను. = I'm working <em>while eating</em>. = मैं <em>खाते हुए</em> काम कर रहा हूँ।</li>
+</ul>
+<p>This form can often be obtained by adding తూ to the verb's
+<a href="#imperative">imperative</a> form, but there are a lot of exceptions to this rule.</p>
+<h3 id="past-adverbial-participle">Past Adverbial Participle</h3>
+<p>The past adverbial participle is used to describe actions that happen sequentially. Examples:</p>
+<ul>
+<li>చేతులు <em>కడిగి</em> రా. = Wash your hands and come. = हाथ <em>धोकर</em> आओ।</li>
+<li>నేను <em>తిని</em> వెళ్లాను. = I left <em>after eating</em>. = मैं <em>खाकर</em> चला गया।</li>
+</ul>
+<p>This form can often be obtained by changing the <a href="#imperative">imperative</a> form's
+final ఉ to ఇ, but there are a lot of exceptions to this rule.</p>
+<h3 id="negative-adverbial-participle">Negative Adverbial Participle</h3>
+<p>The negative adverbial participle is used to describe an action happening
+without another action happening or having happened.</p>
+<ul>
+<li>అతను <em>తినకుండా</em> వెళ్లాడు. = He left <em>without eating</em>. = वह <em>खाए बिना</em> चला गया।</li>
+<li>ఆమె <em>నిద్రపోకుండా</em> పని చేస్తోంది.
+    = She is working <em>without sleeping</em>.
+    = वह <em>बिना सोए</em> काम कर रही है।</li>
+</ul>
+<p>This form can be obtained by appending అకుండా to the <a href="#infinitive">infinitive</a>
+(or equivalently, by appending ఉండా to the <a href="#imperative">negative imperative</a>).</p>
+<h3 id="present-adjectival-participle">Present Adjectival Participle</h3>
+<p>The present adjectival participle can describe
+either the subject currently doing the action
+or the object currently receiving the action.</p>
+<ul>
+<li>పుస్తకం <em>చదువుతున్న</em> అమ్మాయి
+    = The girl <em>who is reading</em> the book
+    = किताब <em>पढ़ रही</em> लड़की</li>
+<li>అమ్మాయి <em>చదువుతున్న</em> పుస్తకం
+    = The book <em>that</em> the girl <em>is reading</em>
+    = लड़की <em>द्वारा पढ़ी जा रही</em> किताब</li>
+</ul>
+<p>Other examples:</p>
+<ul>
+<li><em>ఆడుతున్న</em> పిల్లలకు చూడు.
+    = Look at the children <em>who are playing</em>.
+    = <em>खेल रहे</em> बच्चों को देखो।</li>
+<li><em>తింటున్న</em> ఆహారం చప్పగా ఉంది.
+    = The food <em>that's being eaten</em> is bland.
+    = <em>खाया जा रहा</em> खाना फीका है।</li>
+</ul>
+<p>The present adjectival participle can be obtained from the
+<a href="#present-adverbial-participle">present adverbial participle</a>
+by replacing the final ఊ with ఉన్న. Examples:</p>
+<ul>
+<li>చదువు: చదువుతూ → చదువుతున్న</li>
+<li>తిను: తింటూ → తింటున్న</li>
+</ul>
+<h3 id="past-adjectival-participle">Past Adjectival Participle</h3>
+<p>The past adjectival participle can describe
+either the subject that did the action
+or the object that received the action.</p>
+<ul>
+<li>పుస్తకం <em>చదివిన</em> అమ్మాయి
+    = The girl <em>who read</em> the book
+    = <em>वह</em> लड़खी <em>जिसने</em> किताब <em>पढ़ी</em></li>
+<li>అమ్మాయి <em>చదివిన</em> పుస్తకం
+    = The book <em>read by</em> the girl
+    = लड़की <em>द्वारा पढ़ी गई</em> किताब</li>
+</ul>
+<p>Other examples:</p>
+<ul>
+<li><em>వచ్చిన</em> పిల్లలకు నీళ్లు ఇవ్వు.
+    = Give water to the children <em>who have come</em>.
+    = <em>आए हुए</em> बच्चों को पानी दो.</li>
+<li><em>అడిగిన</em> ప్రశ్నలు నీకు గుర్తున్నాయా?
+    = Do you remember the questions <em>that were asked</em>?
+    = तुम्हें <em>पूछे गए</em> प्रश्न याद हैं क्या?</li>
+</ul>
+<p>The past adjectival participle can be obtained from the
+<a href="#past-adverbial-participle">past adverbial participle</a>.
+If the past adverbial participle ends with ని, change the ని to న్న.
+Otherwise, append న to the past adverbial participle. Examples:</p>
+<ul>
+<li>అడుగు: అడిగి → అడిగిన</li>
+<li>తిను: తిని → తిన్న</li>
+<li>కూర్చో: కూర్చుని → కూర్చున్న</li>
+</ul>
+<h3 id="futurehabitual-adjectival-participle">Future/Habitual Adjectival Participle</h3>
+<p>The future/habitual adjectival participle can describe
+either the subject that does (or will do) the action
+or the object that receives (or will receive) the action.</p>
+<ul>
+<li>coffee <em>తాగే</em> అమ్మాయి
+    = The girl <em>who drinks</em> coffee
+    = coffee <em>पीने वाली</em> लड़की</li>
+<li>అమ్మాయి <em>తాగే</em> coffee
+    = The coffee <em>that</em> the girl <em>drinks</em>
+    = लड़की <em>द्वारा पिए जाने वाली</em> coffee</li>
+</ul>
+<p>Other examples:</p>
+<ul>
+<li>రేపు <em>వచ్చే</em> పిల్లల కోసం ఆహారం ఉందా?
+    = Is there food for children <em>who will come</em> tomorrow?
+    = कल <em>आने वाले</em> बच्चों के लिए खाना है क्या?</li>
+</ul>
+<p>The future/habitual adjectival participle can be obtained from the
+<a href="#past-adverbial-participle">past adverbial participle</a>
+by replacing the final ఇ with ఏ. Examples:</p>
+<ul>
+<li>రా: వచ్చి → వచ్చే</li>
+<li>కూర్చో: కూర్చుని → కూర్చునే</li>
+</ul>
+<h3 id="negative-adjectival-participle">Negative Adjectival Participle</h3>
+<p>The negative adjectival participle can describe
+either the subject that doesn't/didn't do the action
+or the object that doesn't/didn't receive the action.</p>
+<ul>
+<li>పుస్తకం <em>చదవని</em> అమ్మాయి
+    = The girl <em>who did not read</em> the book
+    = <em>वह</em> लड़की <em>जिसने</em> किताब <em>नहीं पढ़ी</em></li>
+<li>అమ్మాయి <em>చదవని</em> పుస్తకం
+    = The book <em>not read by</em> the girl
+    = <em>वह</em> किताब <em>जो</em> लड़की ने <em>नहीं पढ़ी</em></li>
+</ul>
+<p>In Telugu, the negative adjectival participle doesn't change based on tense.</p>
+<ul>
+<li><em>ఆడని</em> పిల్లలకు చూడు.
+    = Look at the children <em>who are not playing</em>.
+    = <em>उन</em> बच्चों को देखो <em>जो नहीं खेल रहे</em>।</li>
+<li><em>తినని</em> ఆహారం చప్పగా ఉంది.
+    = The food <em>that was not eaten</em> is bland.
+    = <em>नहीं खाया गया</em> खाना फीका है।</li>
+</ul>
+<p>The future/habitual adjectival participle can be obtained by appending ని
+to the <a href="#infinitive">infinitive</a>. Examples:</p>
+<ul>
+<li>అడుగు: అడగ → అడగని</li>
+<li>కూర్చో: కూర్చో → కూర్చోని</li>
+</ul>
+<h2 id="comparative-adverb-forms">Comparative Adverb Forms</h2>
+<h3 id="manner-adverb-form">Manner Adverb Form</h3>
+<ul>
+<li>Present: నువ్వు <em>నడుస్తున్నట్లు</em> నేను నడవను.
+    = I will not walk <em>the way</em> you <em>are walking</em>.
+    = तुम <em>जैसे चल रहे हो वैसे</em> मैं नहीं चलूँगा।</li>
+<li>Past: వాళ్లు <em>ఆడినట్లు</em> మనం ఆడినకూడదు.
+    = We should not play <em>the way</em> they <em>played</em>.
+    = उन्होंने <em>जैसे खेला वैसे</em> हमें नहीं खेलना चाहिए।</li>
+<li>Habitual: మనం <em>అనుకునేటట్లు</em> జరుగుతుందా?
+    = Do things happen <em>the way</em> we <em>think</em>?
+    = हम <em>जैसा सोचते हैं वैसा</em> होता है क्या?</li>
+</ul>
+<p>The derived manner adverb can be derived from the
+adjectival <a href="#participles">participle</a> of the appropriate tense.
+For the future/habitual tense, append టట్లు to the participle,
+and for the other tenses, append అట్లు to the participle.</p>
+<p>Examples:</p>
+<ul>
+<li>Habitual: ఆమె వచ్చేటట్లు = the way she comes = वह जैसे आती है वैसे</li>
+<li>Future: ఆమె వచ్చేటట్లు = the way she will come = वह जैसे आएगी वैसे</li>
+<li>Present: అతను వస్తున్నట్లు = the way he is coming = वह जैसे आ रहा है वैसे</li>
+<li>Past: నేను వచ్చినట్లు = the way I came = मैं जैसे आया वैसे</li>
+</ul>
+<h3 id="temporal-adverb-form">Temporal Adverb Form</h3>
+<ul>
+<li>Present: నేను <em>మాట్లాడ్తున్నప్పుడు</em> తినకు.
+    = Don't eat <em>while</em> I'm <em>talking</em>.
+    = मैं <em>जब बात कर रहा हूँ तब</em> मत खाओ।</li>
+<li>Future: నువ్వు <em>వచ్చేటప్పుడు</em> నా కోసం పూలు తీసుకురా.
+    = <em>When</em> you <em>come</em>, bring flowers for me.
+    = तुम <em>जब आओ तब</em> मेरे लिए फूल ले आना।</li>
+<li>Past: అతను <em>వచ్చినప్పుడు</em> నా కోసం పూలు తీసుకొచ్చాడు.
+    = <em>When</em> he <em>came</em>, he brought flowers for me.
+    = वह <em>जब आया तब</em> मेरे लिए फूल लाया।</li>
+</ul>
+<p>The temporal adverb can be derived from the
+adjectival <a href="#participles">participle</a> of the appropriate tense.
+For the future/habitual tense, append టప్పుడు to the participle,
+and for the other tenses, append అప్పుడు to the participle.</p>
+<h3 id="quantitative-adverb-form">Quantitative Adverb Form</h3>
+<ul>
+<li>Amount: నా దగ్గర నువ్వు <em>అడిగినంత</em> డబ్బులు లేదు.
+    = I don't have <em>as much</em> money <em>as</em> you <em>asked for</em>.
+    = मेरे पास तुमने <em>जितना पूछा उतना</em> पैसा नहीं है।</li>
+<li>Number: నేను <em>తిన్నన్ని</em> రొట్టెలు నువ్వు కూడా తిను.
+    = Eat <em>as many</em> rotis <em>as</em> I <em>ate</em>.
+    = मैंने <em>जितनी</em> रोटियाँ <em>खाई उतनी</em> तुम भी खाओ।</li>
+</ul>
+<p>Construction rule:</p>
+<ul>
+<li>Amount quantitative adverb form is obtained by adding అంత to the
+<a href="#past-adjectival-participle">past adjectival participle</a>.</li>
+<li>Number quantitative adverb form is obtained by adding అన్ని to the
+<a href="#past-adjectival-participle">past adjectival participle</a>.</li>
+</ul>
+<h2 id="other-forms">Other Forms</h2>
+<h3 id="gerund">Gerund</h3>
+<p>The gerund is a noun form of the verb. Examples:</p>
+<ul>
+<li>నాకు <em>నిద్రపోవటం</em> ఇష్టం. = I like <em>sleeping</em>. = मुझे <em>सोना</em> पसंद है।</li>
+<li>ఎక్కువగా <em>తినటం</em> మంచిది కాదు. = <em>Eating</em> a lot is not good. = ज्यादा <em>खाना</em> ठीक नहीं होता।</li>
+</ul>
+<p>The gerund is usually formed by appending టం or డం to the verb's <a href="#infinitive">infinitive</a>.
+Examples:</p>
+<ul>
+<li>అడుగు: అడగ → అడగటం / అడగడం</li>
+<li>తిను: తిన → తినటం / తినడం</li>
+<li>కూర్చో: కూర్చో → కూర్చోటం / కూర్చోడం</li>
+</ul>
+<p>For verbs whose infinitive ends with పో, కా, రా, or తే,
+the gerund is formed by appending వటం or వడం instead.
+Examples:</p>
+<ul>
+<li>రా → రావటం / రావడం</li>
+<li>నిద్రపో → నిద్రపోవటం / నిద్రపోవడం</li>
+</ul>
+<p>For verbs whose infinitive ends with కో, either టం/డం or వటం/వడం
+is appended depending on dialect. Example:</p>
+<ul>
+<li>తీసుకో → తీసుకోటం / తీసుకోవటం</li>
+</ul>
+<h3 id="conditional">Conditional</h3>
+<ul>
+<li>నువ్వు <em>వస్తే</em> చెప్తాను. = If will tell you <em>if</em> you <em>come</em>. = तुम <em>आओगे तो</em> बताऊँगा।</li>
+<li>ఈ అవకాశం <em>పోతే</em> మళ్ళీ రాదు.
+    = <em>If</em> this opportunity <em>is missed</em> it won't come again.
+    = यह अवसर <em>चला गया तो</em> फिर नही आएगा।</li>
+</ul>
+<p>It can often be obtained by replacing the final ఊ in the
+<a href="#present-adverbial-participle">present adverbial participle</a> by ఏ,
+but unfortunately there are a lot of exceptions to this rule.</p>
+<h3 id="obligatory">Obligatory</h3>
+<ul>
+<li>నేను పుస్తకం <em>చదవాలి</em>. = I <em>should read</em> the book. = मुझे किताब <em>पढ़नी चाहिए</em>।</li>
+<li>నువ్వు <em>కూర్చోవాలి</em>. = You <em>should sit</em>. = तुम्हें <em>बैठना चाहिए</em>।</li>
+<li>ఆమె <em>తినాలి</em>. = She <em>should eat</em>. = उसे <em>खाना चाहिए</em>।</li>
+</ul>
+<p>The obligatory form can be constructed from the <a href="#infinitive">infinitive</a>.
+If the infinitive ends in a long vowel, append వాలి to it, otherwise append ఆలి to it.
+Examples:</p>
+<ul>
+<li>అడుగు: అడగ → అడగాలి</li>
+<li>పో: పో → పోవాలి</li>
+<li>తీసుకో: తీసుకో → తీసుకోవాలి</li>
+</ul>
+<h3 id="hortative">Hortative</h3>
+<ul>
+<li>పోదాం = let's go = चलते हैं</li>
+<li>తిందాం = let's eat = खाते हैं</li>
+<li>కూర్చుందాం = let's sit = बैठते हैं</li>
+<li>రాద్దాం = let's write = लिखते हैं</li>
+</ul>
+<p>The hortative can be obtained from the
+<a href="#present-adverbial-participle">present adverbial participle</a>.
+First, replace the final తూ or టూ with దాం,
+and then if it ends with స్డాం, replace that with ద్దాం.</p>
+<script type="module" src="https://sharmaeklavya2.github.io/trin/trinUI.js?init=true&addCss=true"></script>
+</body>
+</html>
